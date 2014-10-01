@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
+		DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */; };
+		DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
+		DAA37CBD19DB80AF00F3707E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CBB19DB80AF00F3707E /* InfoPlist.strings */; };
+		DAA37CBF19DB80AF00F3707E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CBE19DB80AF00F3707E /* main.m */; };
+		DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CC219DB80AF00F3707E /* BGGAppDelegate.m */; };
+		DAA37CC619DB80AF00F3707E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CC419DB80AF00F3707E /* Main.storyboard */; };
+		DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CC819DB80AF00F3707E /* BGGViewController.m */; };
+		DAA37CCB19DB80AF00F3707E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CCA19DB80AF00F3707E /* Images.xcassets */; };
+		DAA37CD219DB80AF00F3707E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CD119DB80AF00F3707E /* XCTest.framework */; };
+		DAA37CD319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
+		DAA37CD419DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
+		DAA37CDC19DB80AF00F3707E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CDA19DB80AF00F3707E /* InfoPlist.strings */; };
+		DAA37CDE19DB80AF00F3707E /* ColorthesiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAA37CD519DB80AF00F3707E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAA37CA719DB80AF00F3707E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAA37CAE19DB80AF00F3707E;
+			remoteInfo = Colorthesia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAA37CAF19DB80AF00F3707E /* Colorthesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorthesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA37CB219DB80AF00F3707E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DAA37CB619DB80AF00F3707E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DAA37CBA19DB80AF00F3707E /* Colorthesia-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colorthesia-Info.plist"; sourceTree = "<group>"; };
+		DAA37CBC19DB80AF00F3707E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DAA37CBE19DB80AF00F3707E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAA37CC019DB80AF00F3707E /* Colorthesia-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colorthesia-Prefix.pch"; sourceTree = "<group>"; };
+		DAA37CC119DB80AF00F3707E /* BGGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGGAppDelegate.h; sourceTree = "<group>"; };
+		DAA37CC219DB80AF00F3707E /* BGGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGGAppDelegate.m; sourceTree = "<group>"; };
+		DAA37CC519DB80AF00F3707E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAA37CC719DB80AF00F3707E /* BGGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGGViewController.h; sourceTree = "<group>"; };
+		DAA37CC819DB80AF00F3707E /* BGGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGGViewController.m; sourceTree = "<group>"; };
+		DAA37CCA19DB80AF00F3707E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DAA37CD019DB80AF00F3707E /* ColorthesiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorthesiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA37CD119DB80AF00F3707E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DAA37CD919DB80AF00F3707E /* ColorthesiaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorthesiaTests-Info.plist"; sourceTree = "<group>"; };
+		DAA37CDB19DB80AF00F3707E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorthesiaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAA37CAC19DB80AF00F3707E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */,
+				DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */,
+				DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA37CCD19DB80AF00F3707E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA37CD219DB80AF00F3707E /* XCTest.framework in Frameworks */,
+				DAA37CD419DB80AF00F3707E /* UIKit.framework in Frameworks */,
+				DAA37CD319DB80AF00F3707E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAA37CA619DB80AF00F3707E = {
+			isa = PBXGroup;
+			children = (
+				DAA37CB819DB80AF00F3707E /* Colorthesia */,
+				DAA37CD719DB80AF00F3707E /* ColorthesiaTests */,
+				DAA37CB119DB80AF00F3707E /* Frameworks */,
+				DAA37CB019DB80AF00F3707E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAA37CB019DB80AF00F3707E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CAF19DB80AF00F3707E /* Colorthesia.app */,
+				DAA37CD019DB80AF00F3707E /* ColorthesiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAA37CB119DB80AF00F3707E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CB219DB80AF00F3707E /* Foundation.framework */,
+				DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */,
+				DAA37CB619DB80AF00F3707E /* UIKit.framework */,
+				DAA37CD119DB80AF00F3707E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAA37CB819DB80AF00F3707E /* Colorthesia */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CC119DB80AF00F3707E /* BGGAppDelegate.h */,
+				DAA37CC219DB80AF00F3707E /* BGGAppDelegate.m */,
+				DAA37CC419DB80AF00F3707E /* Main.storyboard */,
+				DAA37CC719DB80AF00F3707E /* BGGViewController.h */,
+				DAA37CC819DB80AF00F3707E /* BGGViewController.m */,
+				DAA37CCA19DB80AF00F3707E /* Images.xcassets */,
+				DAA37CB919DB80AF00F3707E /* Supporting Files */,
+			);
+			path = Colorthesia;
+			sourceTree = "<group>";
+		};
+		DAA37CB919DB80AF00F3707E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CBA19DB80AF00F3707E /* Colorthesia-Info.plist */,
+				DAA37CBB19DB80AF00F3707E /* InfoPlist.strings */,
+				DAA37CBE19DB80AF00F3707E /* main.m */,
+				DAA37CC019DB80AF00F3707E /* Colorthesia-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAA37CD719DB80AF00F3707E /* ColorthesiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */,
+				DAA37CD819DB80AF00F3707E /* Supporting Files */,
+			);
+			path = ColorthesiaTests;
+			sourceTree = "<group>";
+		};
+		DAA37CD819DB80AF00F3707E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CD919DB80AF00F3707E /* ColorthesiaTests-Info.plist */,
+				DAA37CDA19DB80AF00F3707E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAA37CAE19DB80AF00F3707E /* Colorthesia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA37CE119DB80AF00F3707E /* Build configuration list for PBXNativeTarget "Colorthesia" */;
+			buildPhases = (
+				DAA37CAB19DB80AF00F3707E /* Sources */,
+				DAA37CAC19DB80AF00F3707E /* Frameworks */,
+				DAA37CAD19DB80AF00F3707E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Colorthesia;
+			productName = Colorthesia;
+			productReference = DAA37CAF19DB80AF00F3707E /* Colorthesia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAA37CCF19DB80AF00F3707E /* ColorthesiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA37CE419DB80AF00F3707E /* Build configuration list for PBXNativeTarget "ColorthesiaTests" */;
+			buildPhases = (
+				DAA37CCC19DB80AF00F3707E /* Sources */,
+				DAA37CCD19DB80AF00F3707E /* Frameworks */,
+				DAA37CCE19DB80AF00F3707E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAA37CD619DB80AF00F3707E /* PBXTargetDependency */,
+			);
+			name = ColorthesiaTests;
+			productName = ColorthesiaTests;
+			productReference = DAA37CD019DB80AF00F3707E /* ColorthesiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAA37CA719DB80AF00F3707E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BGG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Big Gorilla Games";
+				TargetAttributes = {
+					DAA37CCF19DB80AF00F3707E = {
+						TestTargetID = DAA37CAE19DB80AF00F3707E;
+					};
+				};
+			};
+			buildConfigurationList = DAA37CAA19DB80AF00F3707E /* Build configuration list for PBXProject "Colorthesia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAA37CA619DB80AF00F3707E;
+			productRefGroup = DAA37CB019DB80AF00F3707E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAA37CAE19DB80AF00F3707E /* Colorthesia */,
+				DAA37CCF19DB80AF00F3707E /* ColorthesiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAA37CAD19DB80AF00F3707E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA37CCB19DB80AF00F3707E /* Images.xcassets in Resources */,
+				DAA37CBD19DB80AF00F3707E /* InfoPlist.strings in Resources */,
+				DAA37CC619DB80AF00F3707E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA37CCE19DB80AF00F3707E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA37CDC19DB80AF00F3707E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAA37CAB19DB80AF00F3707E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA37CBF19DB80AF00F3707E /* main.m in Sources */,
+				DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */,
+				DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA37CCC19DB80AF00F3707E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA37CDE19DB80AF00F3707E /* ColorthesiaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAA37CD619DB80AF00F3707E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAA37CAE19DB80AF00F3707E /* Colorthesia */;
+			targetProxy = DAA37CD519DB80AF00F3707E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAA37CBB19DB80AF00F3707E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA37CBC19DB80AF00F3707E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DAA37CC419DB80AF00F3707E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA37CC519DB80AF00F3707E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAA37CDA19DB80AF00F3707E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA37CDB19DB80AF00F3707E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAA37CDF19DB80AF00F3707E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAA37CE019DB80AF00F3707E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAA37CE219DB80AF00F3707E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
+				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DAA37CE319DB80AF00F3707E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
+				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DAA37CE519DB80AF00F3707E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Colorthesia.app/Colorthesia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ColorthesiaTests/ColorthesiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DAA37CE619DB80AF00F3707E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Colorthesia.app/Colorthesia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
+				INFOPLIST_FILE = "ColorthesiaTests/ColorthesiaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAA37CAA19DB80AF00F3707E /* Build configuration list for PBXProject "Colorthesia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA37CDF19DB80AF00F3707E /* Debug */,
+				DAA37CE019DB80AF00F3707E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAA37CE119DB80AF00F3707E /* Build configuration list for PBXNativeTarget "Colorthesia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA37CE219DB80AF00F3707E /* Debug */,
+				DAA37CE319DB80AF00F3707E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAA37CE419DB80AF00F3707E /* Build configuration list for PBXNativeTarget "ColorthesiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA37CE519DB80AF00F3707E /* Debug */,
+				DAA37CE619DB80AF00F3707E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAA37CA719DB80AF00F3707E /* Project object */;
+}
