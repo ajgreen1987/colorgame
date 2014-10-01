@@ -9,6 +9,7 @@
 #import "BGGViewController.h"
 #import "BGGUtilities.h"
 #import "IQIrregularView.h"
+#import "BGGIrregularButton.h"
 
 @interface BGGViewController ()
 
@@ -21,7 +22,7 @@ typedef void(^animationBlock)(BOOL);
 @property (nonatomic, weak) IBOutlet UILabel *sLabel;
 @property (nonatomic, weak) IBOutlet UILabel *iLabel;
 @property (nonatomic, weak) IBOutlet UILabel *aLabel;
-@property (nonatomic, weak) IBOutlet IQIrregularView *playButton;
+@property (nonatomic, strong) BGGIrregularButton *play;
 
 - (void) animateTitleLabel;
 
@@ -32,6 +33,9 @@ typedef void(^animationBlock)(BOOL);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.play = [self playButton];
+    [[self view] addSubview:self.play];
     
     [self animateTitleLabel];
     
@@ -74,6 +78,30 @@ typedef void(^animationBlock)(BOOL);
             [UILabel commitAnimations];
         }
     });
+    
+    double buttonDelayInSeconds = 6;
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, buttonDelayInSeconds * NSEC_PER_SEC);
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^(void){
+        // Animate fade out
+        for(int i=0;i<labels.count;i++)
+        {
+            [UILabel beginAnimations:NULL context:nil];
+            [UILabel setAnimationDuration:1.0f];
+            [self.play setAlpha:1.0f];
+            [UILabel commitAnimations];
+        }
+    });
+}
+
+- (BGGIrregularButton*) playButton
+{
+    CGRect buttonFrame = CGRectMake(18.0f, 141.0f, 284.0f, 285.0f);
+    IQIrregularView *oval = [[IQIrregularView alloc] initWithPath:[IQIrregularView ovalPathWithFrame:buttonFrame] ];
+
+    BGGIrregularButton *toReturn = [[BGGIrregularButton alloc] initWithFrame:buttonFrame andIrregularShape:oval];
+    [toReturn setAlpha:0.0f];
+    
+    return toReturn;
 }
 
 @end

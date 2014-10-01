@@ -13,7 +13,6 @@
             <string>Quicksand-Light</string>
             <string>Quicksand-Light</string>
             <string>Quicksand-Light</string>
-            <string>Quicksand-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -30,50 +29,47 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COLOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiR-dz-4AO">
-                                <rect key="frame" x="16" y="203" width="138" height="52"/>
+                                <rect key="frame" x="23" y="203" width="138" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
+                                <color key="textColor" red="0.33725490196078434" green="0.29411764705882354" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-EW-pXh">
-                                <rect key="frame" x="152" y="203" width="24" height="52"/>
+                                <rect key="frame" x="159" y="203" width="24" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
-                                <color key="textColor" red="0.0" green="0.712890625" blue="5.8467377954361799e-05" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.5725490196078431" green="0.72941176470588232" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Po0-xR-RDo">
-                                <rect key="frame" x="175" y="203" width="24" height="52"/>
+                                <rect key="frame" x="182" y="203" width="24" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
-                                <color key="textColor" red="0.0" green="0.50343919836956519" blue="4.1289321048532923e-05" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.5725490196078431" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYo-1E-tvm">
-                                <rect key="frame" x="200" y="203" width="24" height="52"/>
+                                <rect key="frame" x="207" y="203" width="24" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
-                                <color key="textColor" red="0.0" green="0.38376783288043481" blue="3.147453220014885e-05" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.34509803921568627" green="0.62745098039215685" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MQ-zo-ooS">
-                                <rect key="frame" x="224" y="203" width="24" height="52"/>
+                                <rect key="frame" x="231" y="203" width="24" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
-                                <color key="textColor" red="0.0" green="0.82541582661290325" blue="0.60282258064516125" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.27058823529411763" green="0.49019607843137253" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5J-n0-ZTd">
-                                <rect key="frame" x="249" y="203" width="24" height="52"/>
+                                <rect key="frame" x="256" y="203" width="24" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
-                                <color key="textColor" red="0.0" green="0.644499747983871" blue="0.72716103830645162" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31764705882352939" green="0.58431372549019611" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-JX-EWJ">
-                                <rect key="frame" x="266" y="203" width="24" height="52"/>
+                                <rect key="frame" x="273" y="203" width="24" height="52"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
+                                <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMy-S9-i8Z" customClass="BGGIrregularButton">
-                                <rect key="frame" x="18" y="141" width="284" height="285"/>
-                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="15"/>
-                                <state key="normal" title="Play"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

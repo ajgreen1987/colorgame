@@ -14,8 +14,13 @@ extern void CGPathPrint(CGPathRef path, FILE* file);
 
 //@property(nonatomic, assign) BOOL evenOddFilRule;
 
--(CAShapeLayer*)layer;
+- (CAShapeLayer*) layer;
 
--(id)initWithPoints:(NSArray*)points;
+- (id) initWithPoints:(NSArray*)points;
+- (id) initWithPath:(CGPathRef)aPath;
+- (id) initWithPath:(CGPathRef)aPath andColor:(UIColor*)aColor;
+
+// Shapes
++ (CGPathRef) ovalPathWithFrame:(CGRect)aFrame;
 
 @end

@@ -11,6 +11,8 @@
 
 @interface BGGIrregularButton ()
 
+#define SHAPE_OFFSET 18.0f
+
 @property (nonatomic, strong) IQIrregularView *shape;
 
 @end
@@ -23,19 +25,12 @@
     
     if(self)
     {
-        [self setBackgroundColor:[UIColor clearColor]];
+        [self setBackgroundColor:[UIColor redColor]];
+        [aShape setCenter:CGPointMake(self.center.x-SHAPE_OFFSET, self.frame.origin.y)];
         [self addSubview:aShape];
     }
     
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

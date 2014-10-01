@@ -36,6 +36,11 @@
 
 - (id) initWithPath:(CGPathRef)aPath
 {
+    return [self initWithPath:aPath andColor:[UIColor whiteColor]];
+}
+
+- (id) initWithPath:(CGPathRef)aPath andColor:(UIColor*)aColor
+{
     self = [super initWithFrame:CGPathGetBoundingBox(aPath)];
     
     if (self)
@@ -44,7 +49,7 @@
         CGAffineTransform t = CGAffineTransformMakeTranslation(-CGRectGetMinX(self.frame), -CGRectGetMinY(self.frame));
         [[self layer] setPath:CGPathCreateCopyByTransformingPath(aPath, &t)];
         [[self layer] setFillMode:kCAFillRuleNonZero];
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:aColor];
     }
     
     return self;
