@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
+		DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */; };
 		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
 		DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */; };
 		DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
@@ -21,6 +23,7 @@
 		DAA37CD419DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
 		DAA37CDC19DB80AF00F3707E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CDA19DB80AF00F3707E /* InfoPlist.strings */; };
 		DAA37CDE19DB80AF00F3707E /* ColorthesiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */; };
+		DAA37CE819DB81BC00F3707E /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA676A2019DB876B0016C5A0 /* IQIrregularView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQIrregularView.h; sourceTree = "<group>"; };
+		DA676A2119DB876B0016C5A0 /* IQIrregularView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQIrregularView.m; sourceTree = "<group>"; };
+		DA676A2719DB87B10016C5A0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		DAA37CAF19DB80AF00F3707E /* Colorthesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorthesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA37CB219DB80AF00F3707E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,7 @@
 		DAA37CD919DB80AF00F3707E /* ColorthesiaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorthesiaTests-Info.plist"; sourceTree = "<group>"; };
 		DAA37CDB19DB80AF00F3707E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorthesiaTests.m; sourceTree = "<group>"; };
+		DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA676A1F19DB872F0016C5A0 /* IrregularView */ = {
+			isa = PBXGroup;
+			children = (
+				DA676A2019DB876B0016C5A0 /* IQIrregularView.h */,
+				DA676A2119DB876B0016C5A0 /* IQIrregularView.m */,
+			);
+			name = IrregularView;
+			sourceTree = "<group>";
+		};
+		DA676A2619DB879F0016C5A0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DA676A2719DB87B10016C5A0 /* UIColor+Extension.h */,
+				DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DA676A2A19DB88240016C5A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAA37CC719DB80AF00F3707E /* BGGViewController.h */,
+				DAA37CC819DB80AF00F3707E /* BGGViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		DAA37CA619DB80AF00F3707E = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +147,12 @@
 		DAA37CB819DB80AF00F3707E /* Colorthesia */ = {
 			isa = PBXGroup;
 			children = (
+				DA676A2A19DB88240016C5A0 /* Controllers */,
+				DA676A2619DB879F0016C5A0 /* Categories */,
+				DA676A1F19DB872F0016C5A0 /* IrregularView */,
 				DAA37CC119DB80AF00F3707E /* BGGAppDelegate.h */,
 				DAA37CC219DB80AF00F3707E /* BGGAppDelegate.m */,
 				DAA37CC419DB80AF00F3707E /* Main.storyboard */,
-				DAA37CC719DB80AF00F3707E /* BGGViewController.h */,
-				DAA37CC819DB80AF00F3707E /* BGGViewController.m */,
 				DAA37CCA19DB80AF00F3707E /* Images.xcassets */,
 				DAA37CB919DB80AF00F3707E /* Supporting Files */,
 			);
@@ -126,6 +162,7 @@
 		DAA37CB919DB80AF00F3707E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */,
 				DAA37CBA19DB80AF00F3707E /* Colorthesia-Info.plist */,
 				DAA37CBB19DB80AF00F3707E /* InfoPlist.strings */,
 				DAA37CBE19DB80AF00F3707E /* main.m */,
@@ -231,6 +268,7 @@
 			files = (
 				DAA37CCB19DB80AF00F3707E /* Images.xcassets in Resources */,
 				DAA37CBD19DB80AF00F3707E /* InfoPlist.strings in Resources */,
+				DAA37CE819DB81BC00F3707E /* Quicksand-Light.otf in Resources */,
 				DAA37CC619DB80AF00F3707E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +290,8 @@
 			files = (
 				DAA37CBF19DB80AF00F3707E /* main.m in Sources */,
 				DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */,
+				DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */,
+				DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */,
 				DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +420,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
 				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
 				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +499,7 @@
 				DAA37CE319DB80AF00F3707E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAA37CE419DB80AF00F3707E /* Build configuration list for PBXNativeTarget "ColorthesiaTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +508,7 @@
 				DAA37CE619DB80AF00F3707E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
