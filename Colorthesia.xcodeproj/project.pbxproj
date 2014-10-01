@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
 		DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */; };
+		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
+		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
 		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
 		DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */; };
 		DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 		DA676A2119DB876B0016C5A0 /* IQIrregularView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQIrregularView.m; sourceTree = "<group>"; };
 		DA676A2719DB87B10016C5A0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		DA676A2C19DB8BCC0016C5A0 /* BGGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGUtilities.h; sourceTree = "<group>"; };
+		DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGUtilities.m; sourceTree = "<group>"; };
+		DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGIrregularButton.h; sourceTree = "<group>"; };
+		DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGIrregularButton.m; sourceTree = "<group>"; };
 		DAA37CAF19DB80AF00F3707E /* Colorthesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorthesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA37CB219DB80AF00F3707E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,17 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		DA676A2B19DB8B980016C5A0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA676A2C19DB8BCC0016C5A0 /* BGGUtilities.h */,
+				DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */,
+				DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */,
+				DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		DAA37CA619DB80AF00F3707E = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +164,7 @@
 		DAA37CB819DB80AF00F3707E /* Colorthesia */ = {
 			isa = PBXGroup;
 			children = (
+				DA676A2B19DB8B980016C5A0 /* Utilities */,
 				DA676A2A19DB88240016C5A0 /* Controllers */,
 				DA676A2619DB879F0016C5A0 /* Categories */,
 				DA676A1F19DB872F0016C5A0 /* IrregularView */,
@@ -291,6 +309,8 @@
 				DAA37CBF19DB80AF00F3707E /* main.m in Sources */,
 				DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */,
 				DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */,
+				DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */,
+				DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */,
 				DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */,
 				DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */,
 			);

@@ -30,25 +30,25 @@
 {
     CGPathRef path = [IQIrregularView pathFromPoints:points];
     
-    self = [super initWithFrame:CGPathGetBoundingBox(path)];
+    return [self initWithPath:path];
+    
+}
+
+- (id) initWithPath:(CGPathRef)aPath
+{
+    self = [super initWithFrame:CGPathGetBoundingBox(aPath)];
     
     if (self)
     {
         [self setUserInteractionEnabled:YES];
         CGAffineTransform t = CGAffineTransformMakeTranslation(-CGRectGetMinX(self.frame), -CGRectGetMinY(self.frame));
-        [[self layer] setPath:CGPathCreateCopyByTransformingPath(path, &t)];
+        [[self layer] setPath:CGPathCreateCopyByTransformingPath(aPath, &t)];
         [[self layer] setFillMode:kCAFillRuleNonZero];
         [self setBackgroundColor:[UIColor whiteColor]];
     }
+    
     return self;
 }
-
-//-(void)setEvenOddFilRule:(BOOL)evenOddFilRule
-//{
-//    _evenOddFilRule = evenOddFilRule;
-//
-//    [[self layer] setFillMode:(_evenOddFilRule?kCAFillRuleEvenOdd:kCAFillRuleNonZero)];
-//}
 
 
 #pragma mark - Overrided methods.
@@ -83,20 +83,13 @@
     return [UIColor colorWithCGColor:[[self layer] fillColor]];
 }
 
--(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+
++ (CGPathRef) ovalPathWithFrame:(CGRect)aFrame
 {
-    if (CGPathContainsPoint([[self layer] path], NULL, point, ([[self layer] fillRule] == kCAFillRuleEvenOdd)))
-    {
-        return [super hitTest:point withEvent:event];
-    }
-    else
-    {
-        return nil;
-    }
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:aFrame];
     
+    return CGPathCreateCopy(path.CGPath);
 }
-
-
 
 
 @end
