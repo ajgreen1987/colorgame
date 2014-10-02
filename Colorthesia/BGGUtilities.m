@@ -29,7 +29,8 @@
                                   shape:(IQIrregularView*)aShape
                                  target:(id)aTarget
                               andAction:(SEL)anAction;
-+ (IQIrregularView*) createYellowColoredCircle;
+
++ (IQIrregularView*) createYellowColoredCircleWithFrame:(CGRect)aFrame;
 
 @end
 
@@ -58,10 +59,11 @@
 {
     
     CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 184.0f, 185.0f);
+    CGRect shapeFrame = CGRectMake(0.0f, 0.0f, 184.0f, 185.0f);
     
     
     BGGIrregularButton *toReturn = [self buttonWithFrame:buttonFrame
-                                                   shape:[self createYellowColoredCircle]
+                                                   shape:[self createYellowColoredCircleWithFrame:shapeFrame]
                                                    title:aTitle
                                                   target:aTarget
                                                andAction:anAction];
@@ -77,16 +79,18 @@
                                                  target:(id)aTarget
                                               andAction:(SEL)anAction
 {
-    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 184.0f, 185.0f);
+    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 110.0f, 110.0f);
+    CGRect shapeFrame = CGRectMake(0.0f, 0.0f, 110.0f, 110.0f);
     
     BGGIrregularButton *toReturn =  [self buttonWithFrame:buttonFrame
-                                                    shape:[self createYellowColoredCircle]
+                                                    shape:[self createYellowColoredCircleWithFrame:shapeFrame]
                                                     image:anImage
                                                    target:aTarget
                                                 andAction:anAction];
     
     [toReturn setAlpha:0.0f];
     [toReturn setCenter:CGPointMake(aView.center.x, aView.frame.size.height)];
+    [toReturn setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 50, 0)];
     
     
     return toReturn;
@@ -106,6 +110,7 @@
     
     [toReturn setImage:anImage
               forState:UIControlStateNormal];
+    [toReturn bringSubviewToFront:[toReturn imageView]];
     
     return toReturn;
 }
@@ -143,10 +148,10 @@
     return toReturn;
 }
 
-+ (IQIrregularView*) createYellowColoredCircle
++ (IQIrregularView*) createYellowColoredCircleWithFrame:(CGRect)aFrame
 {
-    CGRect shapeFrame = CGRectMake(0.0f, 0.0f, 184.0f, 185.0f);
-    return [[IQIrregularView alloc] initWithPath:[IQIrregularView ovalPathWithFrame:shapeFrame]
+
+    return [[IQIrregularView alloc] initWithPath:[IQIrregularView ovalPathWithFrame:aFrame]
                                         andColor:[BGGUtilities mainMenuYellow]];
 }
 

@@ -42,7 +42,7 @@ typedef void(^animationBlock)(BOOL);
     [[self view] addSubview:self.play];
     
     self.highScore = [BGGUtilities bottomOrientedOvalButtonForView:self.view
-                                                         withImage:nil
+                                                         withImage:[UIImage imageNamed:@"Ribbon"]
                                                             target:self
                                                          andAction:@selector(showHighScores)];
     [[self view] addSubview:self.highScore];
