@@ -45,11 +45,11 @@
     
     if (self)
     {
-        [self setUserInteractionEnabled:YES];
         CGAffineTransform t = CGAffineTransformMakeTranslation(-CGRectGetMinX(self.frame), -CGRectGetMinY(self.frame));
         [[self layer] setPath:CGPathCreateCopyByTransformingPath(aPath, &t)];
         [[self layer] setFillMode:kCAFillRuleNonZero];
         [self setBackgroundColor:aColor];
+        [self setUserInteractionEnabled:NO];
     }
     
     return self;
@@ -73,14 +73,6 @@
     [[self layer] setFillColor:backgroundColor.CGColor];
 
     [[self layer] setStrokeColor:backgroundColor.CGColor];
-    
-    
-//    borderView = [[UIView alloc] initWithFrame:self.bounds];
-//    [borderView setUserInteractionEnabled:NO];
-//    CAShapeLayer *shapeLayer = [borderView CAShapeLayerFromPoints:[self convertFramePointsToBounds:_arrayTouchPoints]];
-//    [shapeLayer setFillColor:[UIColor clearColor].CGColor];
-//    [shapeLayer setStrokeColor:[UIColor redColor].CGColor];
-//    [shapeLayer setLineWidth:1.0];
 }
 
 -(UIColor *)backgroundColor

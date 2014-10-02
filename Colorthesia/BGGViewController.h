@@ -10,4 +10,7 @@
 
 @interface BGGViewController : UIViewController
 
+- (void) startGame;
+- (void) showHighScores;
+
 @end

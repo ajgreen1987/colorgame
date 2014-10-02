@@ -12,14 +12,19 @@
 
 @interface BGGUtilities : NSObject
 
++ (UIColor*) mainMenuYellow;
+
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
+
 + (BGGIrregularButton*) centerOrientedOvalButtonForView:(UIView*)aView
                                               withTitle:(NSString*)aTitle
+                                                  color:(UIColor*)aColor
                                                  target:(id)aTarget
                                               andAction:(SEL)anAction;
 
 + (BGGIrregularButton*) bottomOrientedOvalButtonForView:(UIView*)aView
                                               withImage:(UIImage*)anImage
+                                                  color:(UIColor*)aColor
                                                  target:(id)aTarget
                                               andAction:(SEL)anAction;
 

@@ -37,12 +37,15 @@ typedef void(^animationBlock)(BOOL);
     
     self.play = [BGGUtilities centerOrientedOvalButtonForView:self.view
                                                     withTitle:@"Play"
+                                                        color:[BGGUtilities mainMenuYellow]
                                                        target:self
                                                     andAction:@selector(startGame)];
+    
     [[self view] addSubview:self.play];
     
     self.highScore = [BGGUtilities bottomOrientedOvalButtonForView:self.view
                                                          withImage:[UIImage imageNamed:@"Ribbon"]
+                                                             color:[BGGUtilities mainMenuYellow]
                                                             target:self
                                                          andAction:@selector(showHighScores)];
     [[self view] addSubview:self.highScore];
@@ -111,6 +114,10 @@ typedef void(^animationBlock)(BOOL);
 - (void) startGame
 {
     // Move to game controller
+    NSLog(@"Start Game!");
+    
+     [self performSegueWithIdentifier:@"TutorialStart"
+                               sender:self];
 }
 
 - (void) showHighScores

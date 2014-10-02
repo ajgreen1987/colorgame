@@ -23,9 +23,7 @@
     if(self)
     {
         [self setBackgroundColor:[UIColor clearColor]];
-        [self insertSubview:aShape atIndex:0];
-        [self setClipsToBounds:YES];
-        [self setAdjustsImageWhenHighlighted:YES];
+        [self addSubview:aShape];
     }
     
     return self;
