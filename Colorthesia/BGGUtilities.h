@@ -8,10 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class BGGIrregularButton;
+
 @interface BGGUtilities : NSObject
 
-+ (void)animateLabel:(UILabel*)aLabel
-            withText:(NSString*)animatedText
-      characterDelay:(NSArray*)animationDelays;
++ (UIFont*) systemFontOfSize:(CGFloat)aSize;
++ (BGGIrregularButton*) centerOrientedOvalButtonForView:(UIView*)aView
+                                              withTitle:(NSString*)aTitle
+                                                 target:(id)aTarget
+                                              andAction:(SEL)anAction;
+
++ (BGGIrregularButton*) bottomOrientedOvalButtonForView:(UIView*)aView
+                                              withImage:(UIImage*)anImage
+                                                 target:(id)aTarget
+                                              andAction:(SEL)anAction;
 
 @end

@@ -11,23 +11,21 @@
 
 @interface BGGIrregularButton ()
 
-#define SHAPE_OFFSET 18.0f
-
-@property (nonatomic, strong) IQIrregularView *shape;
 
 @end
 
 @implementation BGGIrregularButton
 
-- (id) initWithFrame:(CGRect)frame andIrregularShape:(IQIrregularView*)aShape
+- (id) initWithFrame:(CGRect)frame irregularShape:(IQIrregularView*)aShape andShapeOffset:(CGFloat)anOffset
 {
     self = [super initWithFrame:frame];
     
     if(self)
     {
-        [self setBackgroundColor:[UIColor redColor]];
-        [aShape setCenter:CGPointMake(self.center.x-SHAPE_OFFSET, self.frame.origin.y)];
+        [self setBackgroundColor:[UIColor clearColor]];
         [self addSubview:aShape];
+        [self setClipsToBounds:YES];
+        [self setAdjustsImageWhenHighlighted:YES];
     }
     
     return self;

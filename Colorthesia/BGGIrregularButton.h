@@ -12,6 +12,8 @@
 
 @interface BGGIrregularButton : UIButton
 
-- (id) initWithFrame:(CGRect)frame andIrregularShape:(IQIrregularView*)aShape;
+- (id) initWithFrame:(CGRect)frame
+   irregularShape:(IQIrregularView*)aShape
+      andShapeOffset:(CGFloat)anOffset;
 
 @end
