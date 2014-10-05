@@ -14,6 +14,7 @@
             <string>Quicksand-Light</string>
             <string>Quicksand-Light</string>
             <string>Quicksand-Light</string>
+            <string>Quicksand-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -167,6 +168,14 @@
                     <view key="view" contentMode="scaleToFill" id="cnc-8q-Z5d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="... then pick the shape that matches" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00u-KQ-H7M">
+                                <rect key="frame" x="26" y="20" width="269" height="141"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="38"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.29411764709999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dcf-DQ-Sbe"/>
