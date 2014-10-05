@@ -35,6 +35,7 @@ typedef void(^animationBlock)(BOOL);
 {
     [super viewDidLoad];
     
+    
     self.play = [BGGUtilities centerOrientedOvalButtonForView:self.view
                                                     withTitle:@"Play"
                                                         color:[BGGUtilities mainMenuYellow]
@@ -113,11 +114,10 @@ typedef void(^animationBlock)(BOOL);
 
 - (void) startGame
 {
-    // Move to game controller
-    NSLog(@"Start Game!");
+    NSString *properSegue = [BGGUtilities shouldShowTutorial] ? SEGUE_TUTORIAL_START : SEGUE_GAMEPLAY;
     
-     [self performSegueWithIdentifier:@"TutorialStart"
-                               sender:self];
+    [self performSegueWithIdentifier:properSegue
+                              sender:self];
 }
 
 - (void) showHighScores

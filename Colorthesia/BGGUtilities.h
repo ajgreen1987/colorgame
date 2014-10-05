@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#define PREF_TUTORIAL_KEY       @"Tutorial"
+
+#define SEGUE_TUTORIAL_START    @"TutorialStart"
+#define SEGUE_TUTORIAL_SECOND   @"TutorialSecond"
+#define SEGUE_GAMEPLAY          @"GamePlay"
+
 @class BGGIrregularButton;
 
 @interface BGGUtilities : NSObject
+
++ (BOOL) shouldShowTutorial;
+
++ (void) saveTutorialPreferenceSelection:(BOOL)shouldShowNextTime;
 
 + (UIColor*) mainMenuYellow;
 

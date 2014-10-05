@@ -32,11 +32,13 @@
     [[self view] addSubview:self.play];
     
     self.next = [BGGUtilities bottomOrientedOvalButtonForView:self.view
-                                                         withImage:[UIImage imageNamed:@"Ribbon"]
+                                                         withImage:[UIImage imageNamed:@"Next"]
                                                              color:[BGGUtilities mainMenuYellow]
                                                             target:self
-                                                         andAction:@selector(showHighScores)];
+                                                         andAction:@selector(moveToNextController)];
     [[self view] addSubview:self.next];
+    
+    [self fadeInColor];
     
 }
 
@@ -44,6 +46,33 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) fadeInColor
+{
+    [UIView animateWithDuration:0.5
+                          delay:1.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.play setAlpha:1.0f];
+                     }
+                     completion:^(BOOL finished){
+                         [self fadeInNextButton];
+                     }];
+}
+
+- (void) fadeInNextButton
+{
+    [UIView animateWithDuration:0.5
+                          delay:1.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.next setAlpha:1.0f];
+                     }
+                     completion:^(BOOL finished){
+
+                     }];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -54,5 +83,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) moveToNextController
+{
+    // Move to game controller
+    NSLog(@"Tutorial Page Two!");
+    
+    [self performSegueWithIdentifier:SEGUE_TUTORIAL_SECOND
+                              sender:self];
+}
 
 @end

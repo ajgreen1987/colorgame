@@ -27,6 +27,8 @@
 		DAA37CDC19DB80AF00F3707E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CDA19DB80AF00F3707E /* InfoPlist.strings */; };
 		DAA37CDE19DB80AF00F3707E /* ColorthesiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */; };
 		DAA37CE819DB81BC00F3707E /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */; };
+		DAC97CDE19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC97CDD19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m */; };
+		DAC97CE219E1A09D000E7330 /* BGGGamePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC97CE119E1A09D000E7330 /* BGGGamePlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		DAA37CDB19DB80AF00F3707E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAA37CDD19DB80AF00F3707E /* ColorthesiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorthesiaTests.m; sourceTree = "<group>"; };
 		DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.otf"; sourceTree = "<group>"; };
+		DAC97CDC19E19D71000E7330 /* BGGSecondTutorialScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGSecondTutorialScreenViewController.h; sourceTree = "<group>"; };
+		DAC97CDD19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGSecondTutorialScreenViewController.m; sourceTree = "<group>"; };
+		DAC97CE019E1A09D000E7330 /* BGGGamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGGamePlayViewController.h; sourceTree = "<group>"; };
+		DAC97CE119E1A09D000E7330 /* BGGGamePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGGamePlayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +123,10 @@
 		DA676A2A19DB88240016C5A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DAC97CDF19E1A088000E7330 /* Game */,
+				DAC97CDB19E19D58000E7330 /* Tutorial */,
 				DAA37CC719DB80AF00F3707E /* BGGViewController.h */,
 				DAA37CC819DB80AF00F3707E /* BGGViewController.m */,
-				DA13204A19DD0489009D8425 /* BGGFirstTutorialScreenViewController.h */,
-				DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +216,26 @@
 				DAA37CDA19DB80AF00F3707E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAC97CDB19E19D58000E7330 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				DA13204A19DD0489009D8425 /* BGGFirstTutorialScreenViewController.h */,
+				DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */,
+				DAC97CDC19E19D71000E7330 /* BGGSecondTutorialScreenViewController.h */,
+				DAC97CDD19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		DAC97CDF19E1A088000E7330 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				DAC97CE019E1A09D000E7330 /* BGGGamePlayViewController.h */,
+				DAC97CE119E1A09D000E7330 /* BGGGamePlayViewController.m */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +344,8 @@
 				DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */,
 				DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */,
 				DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */,
+				DAC97CE219E1A09D000E7330 /* BGGGamePlayViewController.m in Sources */,
+				DAC97CDE19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m in Sources */,
 				DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

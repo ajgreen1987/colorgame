@@ -36,6 +36,24 @@
 
 @implementation BGGUtilities
 
++ (BOOL) shouldShowTutorial
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    NSObject *object = [prefs objectForKey:PREF_TUTORIAL_KEY];
+    
+    return (object == nil) ? YES : (BOOL)object;
+}
+
++ (void) saveTutorialPreferenceSelection:(BOOL)shouldShowNextTime
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    [prefs setBool:shouldShowNextTime forKey:PREF_TUTORIAL_KEY];
+    
+    [prefs synchronize];
+}
+
 + (UIFont*) systemFontOfSize:(CGFloat)aSize
 {
     return [UIFont fontWithName:@"Quicksand-Light"
