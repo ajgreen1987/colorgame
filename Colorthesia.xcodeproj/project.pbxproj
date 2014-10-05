@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA13204C19DD0489009D8425 /* BGGTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13204B19DD0489009D8425 /* BGGTutorialViewController.m */; };
+		DA13204C19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */; };
 		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
 		DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */; };
 		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA13204A19DD0489009D8425 /* BGGTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGTutorialViewController.h; sourceTree = "<group>"; };
-		DA13204B19DD0489009D8425 /* BGGTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGTutorialViewController.m; sourceTree = "<group>"; };
+		DA13204A19DD0489009D8425 /* BGGFirstTutorialScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGFirstTutorialScreenViewController.h; sourceTree = "<group>"; };
+		DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGFirstTutorialScreenViewController.m; sourceTree = "<group>"; };
 		DA676A2019DB876B0016C5A0 /* IQIrregularView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQIrregularView.h; sourceTree = "<group>"; };
 		DA676A2119DB876B0016C5A0 /* IQIrregularView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQIrregularView.m; sourceTree = "<group>"; };
 		DA676A2719DB87B10016C5A0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 			children = (
 				DAA37CC719DB80AF00F3707E /* BGGViewController.h */,
 				DAA37CC819DB80AF00F3707E /* BGGViewController.m */,
-				DA13204A19DD0489009D8425 /* BGGTutorialViewController.h */,
-				DA13204B19DD0489009D8425 /* BGGTutorialViewController.m */,
+				DA13204A19DD0489009D8425 /* BGGFirstTutorialScreenViewController.h */,
+				DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA37CBF19DB80AF00F3707E /* main.m in Sources */,
-				DA13204C19DD0489009D8425 /* BGGTutorialViewController.m in Sources */,
+				DA13204C19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m in Sources */,
 				DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */,
 				DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */,
 				DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */,
