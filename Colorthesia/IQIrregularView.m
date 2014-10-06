@@ -28,10 +28,14 @@
 
 -(id)initWithPoints:(NSArray*)points
 {
+    return [self initWithPoints:points andColor:[UIColor whiteColor]];
+}
+
+- (id) initWithPoints:(NSArray *)points andColor:(UIColor*)aColor
+{
     CGPathRef path = [IQIrregularView pathFromPoints:points];
     
-    return [self initWithPath:path];
-    
+    return [self initWithPath:path andColor:aColor];
 }
 
 - (id) initWithPath:(CGPathRef)aPath

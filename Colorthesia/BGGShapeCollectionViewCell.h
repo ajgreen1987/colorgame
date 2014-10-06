@@ -1,5 +1,5 @@
 //
-//  BGGShapeGridViewController.h
+//  BGGShapeCollectionViewCell.h
 //  Colorthesia
 //
 //  Created by AJ Green on 10/5/14.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGGIrregularButton.h"
 
-@interface BGGShapeGridViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface BGGShapeCollectionViewCell : UICollectionViewCell
 
 @end

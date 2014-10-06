@@ -17,6 +17,7 @@ extern void CGPathPrint(CGPathRef path, FILE* file);
 - (CAShapeLayer*) layer;
 
 - (id) initWithPoints:(NSArray*)points;
+- (id) initWithPoints:(NSArray *)points andColor:(UIColor*)aColor;
 - (id) initWithPath:(CGPathRef)aPath;
 - (id) initWithPath:(CGPathRef)aPath andColor:(UIColor*)aColor;
 

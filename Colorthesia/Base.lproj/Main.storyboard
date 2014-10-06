@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="70" y="71"/>
         </scene>
-        <!--View Controller-->
+        <!--Shape Grid View Controller-->
         <scene sceneID="Jed-JI-zFA">
             <objects>
-                <viewController id="5dd-Ei-Q2q" sceneMemberID="viewController">
+                <viewController id="5dd-Ei-Q2q" customClass="BGGShapeGridViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3fn-pZ-eXk"/>
                         <viewControllerLayoutGuide type="bottom" id="OGc-WO-4u1"/>
@@ -149,9 +149,35 @@
                     <view key="view" contentMode="scaleToFill" id="m8n-og-Ogz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Plg-wV-JNw">
+                                <rect key="frame" x="42" y="165" width="236" height="237"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t9O-7V-ybJ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Cm-vz-9Xb">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="koo-bF-HGw"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Plg-wV-JNw" id="bf9-Td-F8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTI-b9-oZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

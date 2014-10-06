@@ -38,4 +38,6 @@
                                                  target:(id)aTarget
                                               andAction:(SEL)anAction;
 
++ (BGGIrregularButton*) randomShape;
+
 @end
