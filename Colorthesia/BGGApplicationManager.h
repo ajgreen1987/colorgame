@@ -10,7 +10,7 @@
 
 @interface BGGApplicationManager : NSObject
 
-+ (instancetype)appManager;
++ (instancetype) sharedInstance;
 
 - (void) setColor:(UIColor*)aColor;
 - (UIColor*) color;

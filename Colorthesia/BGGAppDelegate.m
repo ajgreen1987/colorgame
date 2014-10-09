@@ -12,7 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[BGGApplicationManager appManager] setColor:[BGGUtilities mainMenuYellow]];
+    [[BGGApplicationManager sharedInstance] setColor:[BGGUtilities mainMenuYellow]];
     
     return YES;
 }

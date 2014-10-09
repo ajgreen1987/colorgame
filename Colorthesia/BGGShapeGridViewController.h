@@ -10,13 +10,13 @@
 
 @protocol BGGShapeGridDelegate <NSObject>
 
-- (void) touchedCorrectShape;
-- (void) touchedIncorrectShape;
+- (void) touchedShape:(BOOL)isCorrect;
 
 @end
 
 @interface BGGShapeGridViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, assign) id<BGGShapeGridDelegate> gridDelegate;
 
 @end

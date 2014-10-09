@@ -253,6 +253,14 @@
                            alpha:1.0f];
 }
 
++ (UIColor*) restartGray
+{
+    return [UIColor colorWithRed:(109.0f/255.0f)
+                           green:(110.0f/255.0f)
+                            blue:(112.0f/255.0f)
+                           alpha:1.0f];
+}
+
 
 + (UIColor*) colorVariationsForIndex:(NSInteger)anIndex andBaseColor:(UIColor*)aBaseColor
 {

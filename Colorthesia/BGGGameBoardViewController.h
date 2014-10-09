@@ -11,4 +11,7 @@
 
 @interface BGGGameBoardViewController : UIViewController <BGGShapeGridDelegate>
 
+@property (nonatomic, weak) IBOutlet UILabel *score;
+@property (nonatomic, weak) IBOutlet UILabel *result;
+
 @end

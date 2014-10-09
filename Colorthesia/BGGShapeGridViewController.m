@@ -18,11 +18,11 @@
 @interface BGGShapeGridViewController ()
 
 @property (nonatomic, strong) NSArray *shapes;
-@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+
 @property (nonatomic, strong) NSMutableArray *randomShapes;
 @property (nonatomic, strong) NSMutableArray *randomColors;
 
--(void) randomNumberZeroToTenForArray:(NSMutableArray*)anArray;
+- (void) randomNumberZeroToTenForArray:(NSMutableArray*)anArray;
 - (void) shuffleArray:(NSMutableArray*)anArray;
 
 @end
@@ -82,7 +82,9 @@
         {
             BGGIrregularButton *newButton = [BGGUtilities createShape:[[self.randomShapes objectAtIndex:shape] intValue]
                                                        withColorIndex:[[self.randomColors objectAtIndex:shape] intValue]
-                                                         andBaseColor:[[BGGApplicationManager appManager] color]];
+                                                         andBaseColor:[[BGGApplicationManager sharedInstance] color]];
+            
+            [newButton setUserInteractionEnabled:NO];
             
             [columnArray addObject:newButton];
             shape++;
@@ -169,14 +171,17 @@
     UIColor *shapeColor = [shape backgroundColor];
     
     // Compare to AppManager color
-    UIColor *currentGameColor = [[BGGApplicationManager appManager] color];
+    UIColor *currentGameColor = [[BGGApplicationManager sharedInstance] color];
     
     BOOL colorsMatch = [currentGameColor isEqualToColor:shapeColor];
 
-    // Call Appropriate Delegate Method
-    colorsMatch ? [self.gridDelegate touchedCorrectShape] : [self.gridDelegate touchedIncorrectShape];
+    if(self.gridDelegate != nil)
+    {
+        [self.gridDelegate touchedShape:colorsMatch];
+    }
 
 }
+
 
 
 

@@ -61,6 +61,7 @@ typedef enum
 
 + (UIColor*) randomColor;
 + (UIColor*) mainMenuYellow;
++ (UIColor*) restartGray;
 + (UIColor*) colorVariationsForIndex:(NSInteger)anIndex
                         andBaseColor:(UIColor*)aBaseColor;
 

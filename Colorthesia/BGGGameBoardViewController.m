@@ -7,10 +7,14 @@
 //
 
 #import "BGGGameBoardViewController.h"
+#import "BGGIrregularButton.h"
 
 @interface BGGGameBoardViewController ()
 
 @property (nonatomic, weak) BGGShapeGridViewController *containedGrid;
+@property (nonatomic, strong) BGGIrregularButton *replay;
+
+- (void) handleNextOrReplay;
 
 @end
 
@@ -23,11 +27,14 @@
     // Do any additional setup after loading the view.
     self.containedGrid = (BGGShapeGridViewController*)[self.childViewControllers objectAtIndex:0];
     [self.containedGrid setGridDelegate:self];
+    
+    [[self score] setText:[NSString stringWithFormat:@"%li",[[BGGApplicationManager sharedInstance] score]]];
+
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -42,14 +49,45 @@
 
 #pragma mark -
 #pragma mark - Grid Delegate
-- (void) touchedCorrectShape
+- (void) touchedShape:(BOOL)isCorrect
 {
+    [self.containedGrid.collectionView setUserInteractionEnabled:NO];
+
+    NSString *resultText = isCorrect ? @"Correct!" : @"Wrong!";
+    NSString *imageName = isCorrect ? @"Next" : @"Replay";
     
+    [self.result setText:resultText];
+    [self.result setHidden:NO];
+    
+    self.replay = [BGGUtilities bottomOrientedOvalButtonForView:self.view
+                                                      withImage:[UIImage imageNamed:imageName]
+                                                          color:[BGGUtilities restartGray]
+                                                         target:self
+                                                      andAction:@selector(handleNextOrReplay:)];
+    [self.replay setTag:isCorrect];
+    [self.replay setAlpha:1.0f];
+    [[self view] addSubview:self.replay];
+    
+    if (isCorrect)
+    {
+        NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
+        [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
+    }
 }
 
-- (void) touchedIncorrectShape
+- (void) handleNextOrReplay:(id)sender
 {
+    NSInteger tag = self.replay.tag;
     
+    // Not Correct
+    if (tag == 0)
+    {
+        [[self navigationController] popToRootViewControllerAnimated:YES];
+    }
+    else
+    {
+        
+    }
 }
 
 @end

@@ -29,7 +29,7 @@
     self.countdown = 3;
     
     UIColor *randomColor = [BGGUtilities randomColor];
-    [[BGGApplicationManager appManager] setColor:randomColor];
+    [[BGGApplicationManager sharedInstance] setColor:randomColor];
     
 
     self.play = [BGGUtilities centerOrientedOvalButtonForView:self.view
@@ -56,6 +56,8 @@
                                    selector:@selector(handleTimer:)
                                    userInfo:nil
                                     repeats:YES];
+    
+    [[self score] setText:[NSString stringWithFormat:@"%li",[[BGGApplicationManager sharedInstance] score]]];
 }
 
 - (void)didReceiveMemoryWarning

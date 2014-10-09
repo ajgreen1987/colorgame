@@ -10,4 +10,6 @@
 
 @interface BGGGamePlayViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *score;
+
 @end

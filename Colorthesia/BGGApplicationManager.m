@@ -21,7 +21,7 @@ static BGGApplicationManager *sharedAppManager;
 
 #pragma mark Singleton Methods
 
-+ (instancetype)appManager
++ (instancetype)sharedInstance
 {
     @synchronized(self)
     {
