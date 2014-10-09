@@ -11,7 +11,9 @@
 @implementation BGGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
+{
+    [[BGGApplicationManager appManager] setColor:[BGGUtilities mainMenuYellow]];
+    
     return YES;
 }
 							

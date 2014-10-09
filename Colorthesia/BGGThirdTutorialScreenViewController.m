@@ -1,34 +1,36 @@
 //
-//  BGGSecondTutorialScreenViewController.m
+//  BGGThirdTutorialScreenViewController.m
 //  Colorthesia
 //
-//  Created by AJ Green on 10/5/14.
+//  Created by AJ Green on 10/6/14.
 //  Copyright (c) 2014 Big Gorilla Games. All rights reserved.
 //
 
-#import "BGGSecondTutorialScreenViewController.h"
+#import "BGGThirdTutorialScreenViewController.h"
 #import "BGGIrregularButton.h"
 
-@interface BGGSecondTutorialScreenViewController ()
+@interface BGGThirdTutorialScreenViewController ()
 
-@property (nonatomic, strong) BGGIrregularButton *next;
+@property (nonatomic, strong) BGGIrregularButton *start;
+- (void) fadeInStartButton;
 
 @end
 
-@implementation BGGSecondTutorialScreenViewController
+@implementation BGGThirdTutorialScreenViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.next = [BGGUtilities bottomOrientedOvalButtonForView:self.view
+
+    self.start = [BGGUtilities bottomOrientedOvalButtonForView:self.view
                                                     withImage:[UIImage imageNamed:@"Next"]
                                                         color:[BGGUtilities mainMenuYellow]
                                                        target:self
                                                     andAction:@selector(moveToNextController)];
-    [[self view] addSubview:self.next];
+    [[self view] addSubview:self.start];
     
-    [self fadeInNextButton];
+    [self fadeInStartButton];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,13 +38,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) fadeInNextButton
+- (void) fadeInStartButton
 {
     [UIView animateWithDuration:0.5
                           delay:2.0
                         options: UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         [self.next setAlpha:1.0f];
+                         [self.start setAlpha:1.0f];
                      }
                      completion:^(BOOL finished){
                          
@@ -63,9 +65,9 @@
 - (void) moveToNextController
 {
     // Move to game controller
-    NSLog(@"Tutorial Page Three!");
+    NSLog(@"Tutorial Page Game Start!");
     
-    [self performSegueWithIdentifier:SEGUE_TUTORIAL_THIRD
+    [self performSegueWithIdentifier:SEGUE_TUTORIAL_GAME
                               sender:self];
 }
 

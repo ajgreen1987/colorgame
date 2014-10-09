@@ -23,7 +23,9 @@
     if(self)
     {
         [self setBackgroundColor:[UIColor clearColor]];
-        [self addSubview:aShape];
+        
+        self.shape = aShape;
+        [self addSubview:self.shape];
     }
     
     return self;

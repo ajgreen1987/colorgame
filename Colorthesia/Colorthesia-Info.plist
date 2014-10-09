@@ -33,6 +33,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Quicksand-Light.otf</string>
+		<string>Quicksand-Bold.otf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

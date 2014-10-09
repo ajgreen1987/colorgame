@@ -7,7 +7,6 @@
 //
 
 #import "BGGViewController.h"
-#import "BGGUtilities.h"
 #import "IQIrregularView.h"
 #import "BGGIrregularButton.h"
 

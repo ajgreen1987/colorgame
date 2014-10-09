@@ -7,7 +7,6 @@
 //
 
 #import "BGGFirstTutorialScreenViewController.h"
-#import "BGGUtilities.h"
 #import "BGGIrregularButton.h"
 
 @interface BGGFirstTutorialScreenViewController ()

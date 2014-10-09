@@ -16,4 +16,6 @@
    irregularShape:(IQIrregularView*)aShape
       andShapeOffset:(CGFloat)anOffset;
 
+@property (nonatomic, strong) IQIrregularView *shape;
+
 @end

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BGGShapeGridDelegate <NSObject>
+
+- (void) touchedCorrectShape;
+- (void) touchedIncorrectShape;
+
+@end
+
 @interface BGGShapeGridViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic, assign) id<BGGShapeGridDelegate> gridDelegate;
 
 @end

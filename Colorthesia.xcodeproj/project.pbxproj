@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA13204C19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */; };
 		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
-		DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */; };
 		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
 		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
 		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
@@ -32,6 +31,11 @@
 		DAC97CE719E1CF68000E7330 /* BGGShapeGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC97CE519E1CF68000E7330 /* BGGShapeGridViewController.m */; };
 		DAC97CF119E21901000E7330 /* BGGShapeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC97CEF19E21901000E7330 /* BGGShapeCollectionViewCell.m */; };
 		DAC97CF219E21901000E7330 /* BGGShapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC97CF019E21901000E7330 /* BGGShapeCollectionViewCell.xib */; };
+		DACFCDEA19E375270047115B /* BGGThirdTutorialScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACFCDE919E375270047115B /* BGGThirdTutorialScreenViewController.m */; };
+		DACFCDEC19E375950047115B /* Quicksand-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACFCDEB19E375950047115B /* Quicksand-Bold.otf */; };
+		DACFCDF019E431BB0047115B /* BGGApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DACFCDEF19E431BB0047115B /* BGGApplicationManager.m */; };
+		DAD7A70319E60B7000BFE1A9 /* BGGGameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD7A70219E60B7000BFE1A9 /* BGGGameBoardViewController.m */; };
+		DAD7A70A19E6101E00BFE1A9 /* UIColor+Matching.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +53,6 @@
 		DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGFirstTutorialScreenViewController.m; sourceTree = "<group>"; };
 		DA676A2019DB876B0016C5A0 /* IQIrregularView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQIrregularView.h; sourceTree = "<group>"; };
 		DA676A2119DB876B0016C5A0 /* IQIrregularView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQIrregularView.m; sourceTree = "<group>"; };
-		DA676A2719DB87B10016C5A0 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
-		DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		DA676A2C19DB8BCC0016C5A0 /* BGGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGUtilities.h; sourceTree = "<group>"; };
 		DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGUtilities.m; sourceTree = "<group>"; };
 		DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGIrregularButton.h; sourceTree = "<group>"; };
@@ -84,6 +86,15 @@
 		DAC97CEE19E21901000E7330 /* BGGShapeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGShapeCollectionViewCell.h; sourceTree = "<group>"; };
 		DAC97CEF19E21901000E7330 /* BGGShapeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGShapeCollectionViewCell.m; sourceTree = "<group>"; };
 		DAC97CF019E21901000E7330 /* BGGShapeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGGShapeCollectionViewCell.xib; sourceTree = "<group>"; };
+		DACFCDE819E375270047115B /* BGGThirdTutorialScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGThirdTutorialScreenViewController.h; sourceTree = "<group>"; };
+		DACFCDE919E375270047115B /* BGGThirdTutorialScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGThirdTutorialScreenViewController.m; sourceTree = "<group>"; };
+		DACFCDEB19E375950047115B /* Quicksand-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.otf"; sourceTree = "<group>"; };
+		DACFCDEE19E431BB0047115B /* BGGApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGApplicationManager.h; sourceTree = "<group>"; };
+		DACFCDEF19E431BB0047115B /* BGGApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGApplicationManager.m; sourceTree = "<group>"; };
+		DAD7A70119E60B7000BFE1A9 /* BGGGameBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGGameBoardViewController.h; sourceTree = "<group>"; };
+		DAD7A70219E60B7000BFE1A9 /* BGGGameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGGameBoardViewController.m; sourceTree = "<group>"; };
+		DAD7A70819E6101E00BFE1A9 /* UIColor+Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Matching.h"; sourceTree = "<group>"; };
+		DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Matching.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,15 +130,6 @@
 			name = IrregularView;
 			sourceTree = "<group>";
 		};
-		DA676A2619DB879F0016C5A0 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				DA676A2719DB87B10016C5A0 /* UIColor+Extension.h */,
-				DA676A2819DB87B10016C5A0 /* UIColor+Extension.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		DA676A2A19DB88240016C5A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +149,8 @@
 				DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */,
 				DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */,
 				DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */,
+				DAD7A70819E6101E00BFE1A9 /* UIColor+Matching.h */,
+				DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -184,9 +188,9 @@
 		DAA37CB819DB80AF00F3707E /* Colorthesia */ = {
 			isa = PBXGroup;
 			children = (
+				DACFCDED19E431AC0047115B /* Managers */,
 				DA676A2B19DB8B980016C5A0 /* Utilities */,
 				DA676A2A19DB88240016C5A0 /* Controllers */,
-				DA676A2619DB879F0016C5A0 /* Categories */,
 				DA676A1F19DB872F0016C5A0 /* IrregularView */,
 				DAA37CC119DB80AF00F3707E /* BGGAppDelegate.h */,
 				DAA37CC219DB80AF00F3707E /* BGGAppDelegate.m */,
@@ -200,6 +204,7 @@
 		DAA37CB919DB80AF00F3707E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DACFCDEB19E375950047115B /* Quicksand-Bold.otf */,
 				DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */,
 				DAA37CBA19DB80AF00F3707E /* Colorthesia-Info.plist */,
 				DAA37CBB19DB80AF00F3707E /* InfoPlist.strings */,
@@ -234,6 +239,8 @@
 				DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */,
 				DAC97CDC19E19D71000E7330 /* BGGSecondTutorialScreenViewController.h */,
 				DAC97CDD19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m */,
+				DACFCDE819E375270047115B /* BGGThirdTutorialScreenViewController.h */,
+				DACFCDE919E375270047115B /* BGGThirdTutorialScreenViewController.m */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -243,6 +250,8 @@
 			children = (
 				DAC97CE019E1A09D000E7330 /* BGGGamePlayViewController.h */,
 				DAC97CE119E1A09D000E7330 /* BGGGamePlayViewController.m */,
+				DAD7A70119E60B7000BFE1A9 /* BGGGameBoardViewController.h */,
+				DAD7A70219E60B7000BFE1A9 /* BGGGameBoardViewController.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -257,6 +266,15 @@
 				DAC97CF019E21901000E7330 /* BGGShapeCollectionViewCell.xib */,
 			);
 			name = Shared;
+			sourceTree = "<group>";
+		};
+		DACFCDED19E431AC0047115B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DACFCDEE19E431BB0047115B /* BGGApplicationManager.h */,
+				DACFCDEF19E431BB0047115B /* BGGApplicationManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACFCDEC19E375950047115B /* Quicksand-Bold.otf in Resources */,
 				DAA37CCB19DB80AF00F3707E /* Images.xcassets in Resources */,
 				DAA37CBD19DB80AF00F3707E /* InfoPlist.strings in Resources */,
 				DAC97CF219E21901000E7330 /* BGGShapeCollectionViewCell.xib in Resources */,
@@ -359,18 +378,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD7A70A19E6101E00BFE1A9 /* UIColor+Matching.m in Sources */,
 				DAA37CBF19DB80AF00F3707E /* main.m in Sources */,
 				DA13204C19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m in Sources */,
 				DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */,
-				DA676A2919DB87B10016C5A0 /* UIColor+Extension.m in Sources */,
+				DACFCDF019E431BB0047115B /* BGGApplicationManager.m in Sources */,
 				DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */,
 				DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */,
 				DAC97CE719E1CF68000E7330 /* BGGShapeGridViewController.m in Sources */,
 				DAC97CF119E21901000E7330 /* BGGShapeCollectionViewCell.m in Sources */,
 				DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */,
+				DAD7A70319E60B7000BFE1A9 /* BGGGameBoardViewController.m in Sources */,
 				DAC97CE219E1A09D000E7330 /* BGGGamePlayViewController.m in Sources */,
 				DAC97CDE19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m in Sources */,
 				DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */,
+				DACFCDEA19E375270047115B /* BGGThirdTutorialScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,17 +12,30 @@
 
 #define SEGUE_TUTORIAL_START    @"TutorialStart"
 #define SEGUE_TUTORIAL_SECOND   @"TutorialSecond"
+#define SEGUE_TUTORIAL_THIRD    @"TutorialThird"
+#define SEGUE_TUTORIAL_GAME     @"TutorialGamePlay"
 #define SEGUE_GAMEPLAY          @"GamePlay"
+#define SEGUE_GAMEBOARD         @"GameBoard"
 
 @class BGGIrregularButton;
 
 @interface BGGUtilities : NSObject
 
+typedef enum
+{
+    Square,
+    Circle,
+    Triangle,
+    Pentagon,
+    Octagon,
+    Star,
+    Decagon,
+    FreakStar,
+    Oval
+}ShapeType;
+
 + (BOOL) shouldShowTutorial;
-
 + (void) saveTutorialPreferenceSelection:(BOOL)shouldShowNextTime;
-
-+ (UIColor*) mainMenuYellow;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
 
@@ -38,6 +51,17 @@
                                                  target:(id)aTarget
                                               andAction:(SEL)anAction;
 
-+ (BGGIrregularButton*) randomShape;
++ (BGGIrregularButton*) bottomOrientedOvalButtonForView:(UIView*)aView
+                                              withTitle:(NSString*)aTitle
+                                                  color:(UIColor*)aColor
+                                                 target:(id)aTarget
+                                              andAction:(SEL)anAction;
+
++ (BGGIrregularButton*) createShape:(ShapeType)aShapeType withColorIndex:(NSInteger)aColorIndex andBaseColor:(UIColor*)aColor;
+
++ (UIColor*) randomColor;
++ (UIColor*) mainMenuYellow;
++ (UIColor*) colorVariationsForIndex:(NSInteger)anIndex
+                        andBaseColor:(UIColor*)aBaseColor;
 
 @end
