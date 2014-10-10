@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIColor *currentColor;
 @property (nonatomic, assign) NSInteger currentScore;
+@property (nonatomic, assign) NSInteger highScore;
 
 @end
 
@@ -47,11 +48,19 @@ static BGGApplicationManager *sharedAppManager;
 - (void) setScore:(NSInteger)aScore
 {
     self.currentScore = aScore;
+    
+    // Probably needs adjustment for GameCenter
+    self.highScore = (self.currentScore > self.highScore) ? self.currentScore : self.highScore;
 }
 
 - (NSInteger) score
 {
     return self.currentScore;
+}
+
+- (NSInteger) currentHighScore
+{
+    return self.highScore;
 }
 
 @end

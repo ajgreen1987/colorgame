@@ -18,4 +18,6 @@
 - (void) setScore:(NSInteger)aScore;
 - (NSInteger) score;
 
+- (NSInteger) currentHighScore;
+
 @end

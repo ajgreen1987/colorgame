@@ -59,6 +59,9 @@
     [self.result setText:resultText];
     [self.result setHidden:NO];
     
+    [self.highScore setText:[NSString stringWithFormat:@"High Score %li", [[BGGApplicationManager sharedInstance] currentHighScore]]];
+    [self.highScore setHidden:isCorrect];
+    
     self.replay = [BGGUtilities bottomOrientedOvalButtonForView:self.view
                                                       withImage:[UIImage imageNamed:imageName]
                                                           color:[BGGUtilities restartGray]

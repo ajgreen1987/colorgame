@@ -75,15 +75,16 @@
 {
     [self.collectionView setUserInteractionEnabled:NO];
     
-    CGFloat delay = 0.1f;
+    CGFloat delay = 0.2f;
     
     // Animate fade out
     for(int i=0;i<self.collectionView.visibleCells.count;i++)
     {
-        double delayInSeconds = delay + i;
+        double delayInSeconds = 0.5f+(delay*i);
         
-        BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:i];
-        [UIView animateWithDuration:0.2f
+        NSInteger random = [[self.randomShapes objectAtIndex:i] integerValue];
+        BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:random];
+        [UIView animateWithDuration:1.0f
                               delay:delayInSeconds
                             options:UIViewAnimationOptionAllowUserInteraction
                          animations:^{
