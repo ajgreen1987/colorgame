@@ -68,7 +68,13 @@
     
     NSObject *object = [prefs objectForKey:PREF_TUTORIAL_KEY];
     
-    return (object == nil) ? YES : (BOOL)object;
+    return (object == nil) ? YES : [prefs boolForKey:PREF_TUTORIAL_KEY];
+}
+
++ (void) setVersionNumber
+{
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:VERSION_KEY];
+    [[NSUserDefaults standardUserDefaults] setObject:version forKey:PREF_VERSION_KEY];
 }
 
 + (void) saveTutorialPreferenceSelection:(BOOL)shouldShowNextTime

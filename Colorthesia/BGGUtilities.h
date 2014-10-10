@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define PREF_TUTORIAL_KEY       @"Tutorial"
+#define VERSION_KEY             @"CFBundleVersion"
+#define PREF_TUTORIAL_KEY       @"tutorial_preference"
+#define PREF_VERSION_KEY        @"version_preference"
 
 #define SEGUE_TUTORIAL_START    @"TutorialStart"
 #define SEGUE_TUTORIAL_SECOND   @"TutorialSecond"
@@ -16,6 +18,7 @@
 #define SEGUE_TUTORIAL_GAME     @"TutorialGamePlay"
 #define SEGUE_GAMEPLAY          @"GamePlay"
 #define SEGUE_GAMEBOARD         @"GameBoard"
+#define SEGUE_GAMEREPLAY        @"GameReplay"
 
 @class BGGIrregularButton;
 
@@ -35,6 +38,7 @@ typedef enum
 }ShapeType;
 
 + (BOOL) shouldShowTutorial;
++ (void) setVersionNumber;
 + (void) saveTutorialPreferenceSelection:(BOOL)shouldShowNextTime;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;

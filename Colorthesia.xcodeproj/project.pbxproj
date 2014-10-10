@@ -11,6 +11,7 @@
 		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
 		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
 		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
+		DA8E2FB519E760FA00CA2BF9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */; };
 		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
 		DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */; };
 		DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
@@ -57,6 +58,7 @@
 		DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGUtilities.m; sourceTree = "<group>"; };
 		DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGIrregularButton.h; sourceTree = "<group>"; };
 		DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGIrregularButton.m; sourceTree = "<group>"; };
+		DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DAA37CAF19DB80AF00F3707E /* Colorthesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorthesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA37CB219DB80AF00F3707E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -210,6 +212,7 @@
 				DAA37CBB19DB80AF00F3707E /* InfoPlist.strings */,
 				DAA37CBE19DB80AF00F3707E /* main.m */,
 				DAA37CC019DB80AF00F3707E /* Colorthesia-Prefix.pch */,
+				DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				DAC97CF219E21901000E7330 /* BGGShapeCollectionViewCell.xib in Resources */,
 				DAA37CE819DB81BC00F3707E /* Quicksand-Light.otf in Resources */,
 				DAA37CC619DB80AF00F3707E /* Main.storyboard in Resources */,
+				DA8E2FB519E760FA00CA2BF9 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

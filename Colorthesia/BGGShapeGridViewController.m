@@ -45,6 +45,25 @@
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
     [self.collectionView setCollectionViewLayout:flowLayout];
+    
+    __block CGFloat delay = 0.5f;
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        // Animate fade out
+        for(int i=0;i<self.collectionView.visibleCells.count;i++)
+        {
+            BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:i];
+            
+            [UILabel beginAnimations:NULL
+                             context:nil];
+            [UILabel setAnimationDuration:delay];
+            [cell setAlpha:1.0f];
+            [UILabel commitAnimations];
+            
+            delay += 0.5f;
+        }
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,6 +170,7 @@
     
     [cell addSubview:shape];
     
+    [cell setAlpha:0.0f];
     
     return cell;
 }
@@ -164,7 +184,29 @@
     NSInteger row = indexPath.row;
     
     NSArray *shapesForSection = [self.shapes objectAtIndex:section];
+    __block BGGShapeCollectionViewCell *selectedCell = (BGGShapeCollectionViewCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
     BGGIrregularButton *shapeButton = [shapesForSection objectAtIndex:row];
+    
+    double delayInSeconds = 0.f;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        // Animate fade out
+        for(int i=0;i<self.collectionView.visibleCells.count;i++)
+        {
+            BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:i];
+            
+            if(![cell isEqual:selectedCell])
+            {
+            
+            [UILabel beginAnimations:NULL
+                             context:nil];
+            [UILabel setAnimationDuration:0.1f];
+            [cell setAlpha:0.6f];
+            [UILabel commitAnimations];
+            }
+        }
+    });
+    
     IQIrregularView *shape = [shapeButton shape];
     
     // Get that shape's color

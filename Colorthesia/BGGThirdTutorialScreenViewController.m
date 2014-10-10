@@ -67,6 +67,8 @@
     // Move to game controller
     NSLog(@"Tutorial Page Game Start!");
     
+    [BGGUtilities saveTutorialPreferenceSelection:NO];
+    
     [self performSegueWithIdentifier:SEGUE_TUTORIAL_GAME
                               sender:self];
 }

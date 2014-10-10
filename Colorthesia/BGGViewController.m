@@ -115,8 +115,6 @@ typedef void(^animationBlock)(BOOL);
 {
     NSString *properSegue = [BGGUtilities shouldShowTutorial] ? SEGUE_TUTORIAL_START : SEGUE_GAMEPLAY;
     
-    properSegue = SEGUE_GAMEPLAY;
-    
     [self performSegueWithIdentifier:properSegue
                               sender:self];
 }

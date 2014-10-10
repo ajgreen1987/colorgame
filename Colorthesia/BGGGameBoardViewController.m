@@ -14,7 +14,7 @@
 @property (nonatomic, weak) BGGShapeGridViewController *containedGrid;
 @property (nonatomic, strong) BGGIrregularButton *replay;
 
-- (void) handleNextOrReplay;
+- (void) handleNextOrReplay:(id)sender;
 
 @end
 
@@ -86,7 +86,10 @@
     }
     else
     {
+        NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
+        [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
         
+        [self performSegueWithIdentifier:SEGUE_GAMEREPLAY sender:self];
     }
 }
 
