@@ -46,24 +46,14 @@
     
     [self.collectionView setCollectionViewLayout:flowLayout];
     
-    __block CGFloat delay = 0.5f;
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        // Animate fade out
-        for(int i=0;i<self.collectionView.visibleCells.count;i++)
-        {
-            BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:i];
-            
-            [UILabel beginAnimations:NULL
-                             context:nil];
-            [UILabel setAnimationDuration:delay];
-            [cell setAlpha:1.0f];
-            [UILabel commitAnimations];
-            
-            delay += 0.5f;
-        }
+        [self animateInCollectionViewCells];
     });
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +70,33 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+- (void) animateInCollectionViewCells
+{
+    [self.collectionView setUserInteractionEnabled:NO];
+    
+    CGFloat delay = 0.1f;
+    
+    // Animate fade out
+    for(int i=0;i<self.collectionView.visibleCells.count;i++)
+    {
+        double delayInSeconds = delay + i;
+        
+        BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:i];
+        [UIView animateWithDuration:0.2f
+                              delay:delayInSeconds
+                            options:UIViewAnimationOptionAllowUserInteraction
+                         animations:^{
+                             // Fade in with delay
+                             [cell setAlpha:1.0f];
+                         } completion:^(BOOL finished) {
+                             if (i==(self.collectionView.visibleCells.count-1))
+                             {
+                                 [self.collectionView setUserInteractionEnabled:YES];
+                             }
+                         }];
+    }
+}
 
 - (NSArray*) generateShapeGrid
 {
@@ -187,7 +204,7 @@
     __block BGGShapeCollectionViewCell *selectedCell = (BGGShapeCollectionViewCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
     BGGIrregularButton *shapeButton = [shapesForSection objectAtIndex:row];
     
-    double delayInSeconds = 0.f;
+    double delayInSeconds = 0.0f;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         // Animate fade out
@@ -197,12 +214,12 @@
             
             if(![cell isEqual:selectedCell])
             {
-            
-            [UILabel beginAnimations:NULL
-                             context:nil];
-            [UILabel setAnimationDuration:0.1f];
-            [cell setAlpha:0.6f];
-            [UILabel commitAnimations];
+                
+                [UILabel beginAnimations:NULL
+                                 context:nil];
+                [UILabel setAnimationDuration:0.1f];
+                [cell setAlpha:0.6f];
+                [UILabel commitAnimations];
             }
         }
     });
@@ -216,12 +233,13 @@
     UIColor *currentGameColor = [[BGGApplicationManager sharedInstance] color];
     
     BOOL colorsMatch = [currentGameColor isEqualToColor:shapeColor];
-
+    
     if(self.gridDelegate != nil)
     {
+        [self.collectionView setUserInteractionEnabled:NO];
         [self.gridDelegate touchedShape:colorsMatch];
     }
-
+    
 }
 
 
