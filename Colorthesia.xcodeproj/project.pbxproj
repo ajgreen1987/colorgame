@@ -37,6 +37,7 @@
 		DACFCDF019E431BB0047115B /* BGGApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DACFCDEF19E431BB0047115B /* BGGApplicationManager.m */; };
 		DAD7A70319E60B7000BFE1A9 /* BGGGameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD7A70219E60B7000BFE1A9 /* BGGGameBoardViewController.m */; };
 		DAD7A70A19E6101E00BFE1A9 /* UIColor+Matching.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */; };
+		DAE5FFA119EA2FEF008212D0 /* BGGFadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE5FFA019EA2FEF008212D0 /* BGGFadeSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		DAD7A70219E60B7000BFE1A9 /* BGGGameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGGameBoardViewController.m; sourceTree = "<group>"; };
 		DAD7A70819E6101E00BFE1A9 /* UIColor+Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Matching.h"; sourceTree = "<group>"; };
 		DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Matching.m"; sourceTree = "<group>"; };
+		DAE5FF9F19EA2FEF008212D0 /* BGGFadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGFadeSegue.h; sourceTree = "<group>"; };
+		DAE5FFA019EA2FEF008212D0 /* BGGFadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGFadeSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */,
 				DAD7A70819E6101E00BFE1A9 /* UIColor+Matching.h */,
 				DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */,
+				DAE5FF9F19EA2FEF008212D0 /* BGGFadeSegue.h */,
+				DAE5FFA019EA2FEF008212D0 /* BGGFadeSegue.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 			files = (
 				DAD7A70A19E6101E00BFE1A9 /* UIColor+Matching.m in Sources */,
 				DAA37CBF19DB80AF00F3707E /* main.m in Sources */,
+				DAE5FFA119EA2FEF008212D0 /* BGGFadeSegue.m in Sources */,
 				DA13204C19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m in Sources */,
 				DAA37CC919DB80AF00F3707E /* BGGViewController.m in Sources */,
 				DACFCDF019E431BB0047115B /* BGGApplicationManager.m in Sources */,

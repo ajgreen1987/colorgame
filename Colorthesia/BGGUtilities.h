@@ -19,6 +19,7 @@
 #define SEGUE_GAMEPLAY          @"GamePlay"
 #define SEGUE_GAMEBOARD         @"GameBoard"
 #define SEGUE_GAMEREPLAY        @"GameReplay"
+#define SEGUE_GAMEMAIN          @"GameMain"
 
 @class BGGIrregularButton;
 

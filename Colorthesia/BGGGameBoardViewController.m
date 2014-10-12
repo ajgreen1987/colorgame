@@ -85,13 +85,10 @@
     // Not Correct
     if (tag == 0)
     {
-        [[self navigationController] popToRootViewControllerAnimated:YES];
+        [self performSegueWithIdentifier:SEGUE_GAMEMAIN sender:self];
     }
     else
     {
-        NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
-        [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
-        
         [self performSegueWithIdentifier:SEGUE_GAMEREPLAY sender:self];
     }
 }

@@ -238,6 +238,7 @@
     if(self.gridDelegate != nil)
     {
         [self.collectionView setUserInteractionEnabled:NO];
+        
         [self.gridDelegate touchedShape:colorsMatch];
     }
     

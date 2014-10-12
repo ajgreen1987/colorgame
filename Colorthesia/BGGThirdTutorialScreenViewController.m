@@ -27,30 +27,16 @@
                                                         color:[BGGUtilities mainMenuYellow]
                                                        target:self
                                                     andAction:@selector(moveToNextController)];
-    [[self view] addSubview:self.start];
     
-    [self fadeInStartButton];
+    [self.start setAlpha:1.0f];
     
+    [[self view] addSubview:self.start];    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void) fadeInStartButton
-{
-    [UIView animateWithDuration:0.5
-                          delay:2.0
-                        options: UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         [self.start setAlpha:1.0f];
-                     }
-                     completion:^(BOOL finished){
-                         
-                     }];
-}
-
 
 /*
  #pragma mark - Navigation
