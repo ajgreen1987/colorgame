@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_4 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 480.0f)
+#define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+#define IS_IPHONE_6 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 667.0f)
+#define IS_IPHONE_6_PLUS (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 960.0f)
+
 #define VERSION_KEY             @"CFBundleVersion"
 #define PREF_TUTORIAL_KEY       @"tutorial_preference"
 #define PREF_VERSION_KEY        @"version_preference"
@@ -63,6 +70,8 @@ typedef enum
                                               andAction:(SEL)anAction;
 
 + (BGGIrregularButton*) createShape:(ShapeType)aShapeType withColorIndex:(NSInteger)aColorIndex andBaseColor:(UIColor*)aColor;
+
++ (UIButton*) playButtonForView:(UIView*)aView target:(id)aTarget andAction:(SEL)anAction;
 
 + (UIColor*) randomColor;
 + (UIColor*) mainMenuYellow;

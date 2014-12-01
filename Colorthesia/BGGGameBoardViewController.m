@@ -28,8 +28,29 @@
     self.containedGrid = (BGGShapeGridViewController*)[self.childViewControllers objectAtIndex:0];
     [self.containedGrid setGridDelegate:self];
     
-    [[self score] setText:[NSString stringWithFormat:@"%li",[[BGGApplicationManager sharedInstance] score]]];
+    [[self score] setText:[NSString stringWithFormat:@"%li",(long)[[BGGApplicationManager sharedInstance] score]]];
 
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    if (IS_IPHONE_4)
+    {
+        // Need to adjust the grid up slightly
+        CGPoint gridCenter = CGPointMake(self.containedGrid.view.center.x, self.containedGrid.view.center.y - 20.0f);
+        
+        [self.containedGrid.view setCenter:gridCenter];
+        
+        // High score takes a little bit more work, adjust it up
+        CGPoint highScoreCenter = CGPointMake(self.highScore.center.x, self.highScore.center.y - 65.0f);
+        [self.highScore setCenter:highScoreCenter];
+        
+        // Make it one line
+        //[self.highScore setNumberOfLines:1];
+        
+        // Adjust the font
+        //[self.highScore setFont:[BGGUtilities systemFontOfSize:24.0f]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +80,7 @@
     [self.result setText:resultText];
     [self.result setHidden:NO];
     
-    [self.highScore setText:[NSString stringWithFormat:@"High Score %li", [[BGGApplicationManager sharedInstance] currentHighScore]]];
+    [self.highScore setText:[NSString stringWithFormat:@"High Score %li", (long)[[BGGApplicationManager sharedInstance] currentHighScore]]];
     [self.highScore setHidden:isCorrect];
     
     self.replay = [BGGUtilities bottomOrientedOvalButtonForView:self.view

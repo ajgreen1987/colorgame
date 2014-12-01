@@ -21,7 +21,7 @@ typedef void(^animationBlock)(BOOL);
 @property (nonatomic, weak) IBOutlet UILabel *sLabel;
 @property (nonatomic, weak) IBOutlet UILabel *iLabel;
 @property (nonatomic, weak) IBOutlet UILabel *aLabel;
-@property (nonatomic, strong) BGGIrregularButton *play;
+@property (nonatomic, strong) UIButton *play;
 @property (nonatomic, strong) BGGIrregularButton *highScore;
 
 - (void) animateTitleLabel;
@@ -35,11 +35,7 @@ typedef void(^animationBlock)(BOOL);
     [super viewDidLoad];
     
     
-    self.play = [BGGUtilities centerOrientedOvalButtonForView:self.view
-                                                    withTitle:@"Play"
-                                                        color:[BGGUtilities mainMenuYellow]
-                                                       target:self
-                                                    andAction:@selector(startGame)];
+    self.play = [BGGUtilities playButtonForView:self.view target:self andAction:@selector(startGame)];
     
     [[self view] addSubview:self.play];
     
@@ -89,7 +85,7 @@ typedef void(^animationBlock)(BOOL);
             [UILabel beginAnimations:NULL
                              context:nil];
             [UILabel setAnimationDuration:1.0f];
-            [label setFrame:CGRectMake(label.frame.origin.x, 25.0f, label.frame.size.width, label.frame.size.height)];
+            [label setFrame:CGRectMake(label.frame.origin.x, 80.0f, label.frame.size.width, label.frame.size.height)];
             [UILabel commitAnimations];
         }
     });

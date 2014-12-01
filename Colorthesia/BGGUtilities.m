@@ -100,7 +100,7 @@
 
 + (BGGIrregularButton*) createShape:(ShapeType)aShapeType withColorIndex:(NSInteger)aColorIndex andBaseColor:(UIColor*)aColor
 {
-    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
+    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 76.0f, 76.0f);
     
     BGGIrregularButton *toReturn = [self buttonWithFrame:buttonFrame
                                                    shape:[BGGUtilities createShape:aShapeType
@@ -120,8 +120,8 @@
                                               andAction:(SEL)anAction
 {
     
-    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 184.0f, 185.0f);
-    CGRect shapeFrame = CGRectMake(0.0f, 0.0f, 184.0f, 185.0f);
+    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 176.0f, 185.0f);
+    CGRect shapeFrame = CGRectMake(0.0f, 0.0f, 176.0f, 185.0f);
     
     
     BGGIrregularButton *toReturn = [self buttonWithFrame:buttonFrame
@@ -233,6 +233,28 @@
     [toReturn addTarget:aTarget
                  action:anAction
        forControlEvents:UIControlEventTouchUpInside];
+    
+    return toReturn;
+}
+
++ (UIButton*) playButtonForView:(UIView*)aView target:(id)aTarget andAction:(SEL)anAction
+{
+    CGRect buttonFrame = CGRectMake(0.0f, 0.0f, 185.0f, 185.0f);
+    
+    UIButton *toReturn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [toReturn setFrame:buttonFrame];
+    
+    [toReturn setAdjustsImageWhenHighlighted:NO];
+    
+    [toReturn setBackgroundImage:[UIImage imageNamed:@"play"]
+                        forState:UIControlStateNormal];
+    
+    [toReturn addTarget:aTarget
+                 action:anAction
+       forControlEvents:UIControlEventTouchUpInside];
+    
+    [toReturn setAlpha:0.0f];
+    [toReturn setCenter:aView.center];
     
     return toReturn;
 }
@@ -362,85 +384,94 @@
     {
         case Square:
             return [[NSArray alloc] initWithObjects:
-                    [NSValue valueWithCGPoint:CGPointMake(0.0f, 0.0f)],
-                    [NSValue valueWithCGPoint:CGPointMake(50.0f, 0.0f)],
-                    [NSValue valueWithCGPoint:CGPointMake(50.0f, 50.0f)],
-                    [NSValue valueWithCGPoint:CGPointMake(0.0f, 50.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(8.0f, 8.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(76.0f, 8.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(76.0f, 76.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(8.0f, 76.0f)],
                     nil];
         case Triangle:
             return  [[NSArray alloc] initWithObjects:
-                     [NSValue valueWithCGPoint:CGPointMake(25.0f, 0.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(0.0f, 50.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(50.0f, 50.0f)],
+                     [NSValue valueWithCGPoint:CGPointMake(42.04, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(0, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(21.02, 42)],
+                     [NSValue valueWithCGPoint:CGPointMake(42.04, 0)],
+                     [NSValue valueWithCGPoint:CGPointMake(62.98, 42)],
+                     [NSValue valueWithCGPoint:CGPointMake(84, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(42.04, 84)],
                      nil];
         case Pentagon:
             return  [[NSArray alloc] initWithObjects:
-                     [NSValue valueWithCGPoint:CGPointMake(25.0f, 0.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(0.0f, 20.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(10.0f, 50.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(40.0f, 50.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(50.0f, 20.0f)],
+                     [NSValue valueWithCGPoint:CGPointMake(16.05, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(0, 31.54)],
+                     [NSValue valueWithCGPoint:CGPointMake(42, -0.8)],
+                     [NSValue valueWithCGPoint:CGPointMake(84, 31.54)],
+                     [NSValue valueWithCGPoint:CGPointMake(67.95, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(16.05, 84)],
                      nil];
-        case Octagon:
+        case Octagon:            
             return  [[NSArray alloc] initWithObjects:
-                     [NSValue valueWithCGPoint:CGPointMake(15.0f, 0.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(0.0f, 15.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(0.0f, 35.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(15.0f, 50.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(35.0f, 50.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(50.0f, 35.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(50.0f, 15.0f)],
-                     [NSValue valueWithCGPoint:CGPointMake(35.0f, 0.0f)],
+                     [NSValue valueWithCGPoint:CGPointMake(24.65, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(0, 59.44)],
+                     [NSValue valueWithCGPoint:CGPointMake(0, 24.65)],
+                     [NSValue valueWithCGPoint:CGPointMake(24.65, 0)],
+                     [NSValue valueWithCGPoint:CGPointMake(59.44, 0)],
+                     [NSValue valueWithCGPoint:CGPointMake(84, 24.65)],
+                     [NSValue valueWithCGPoint:CGPointMake(84, 59.44)],
+                     [NSValue valueWithCGPoint:CGPointMake(59.44, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(24.65, 84)],
                      nil];
-        case Decagon:
+        case Decagon:            
             return  [[NSArray alloc] initWithObjects:
-                     [NSValue valueWithCGPoint:CGPointMake(25, 0)],
-                     [NSValue valueWithCGPoint:CGPointMake(39.69, 4.77)],
-                     [NSValue valueWithCGPoint:CGPointMake(48.78, 17.27)],
-                     [NSValue valueWithCGPoint:CGPointMake(48.78, 32.73)],
-                     [NSValue valueWithCGPoint:CGPointMake(39.69, 45.23)],
-                     [NSValue valueWithCGPoint:CGPointMake(25, 50)],
-                     [NSValue valueWithCGPoint:CGPointMake(10.31, 45.23)],
-                     [NSValue valueWithCGPoint:CGPointMake(1.22, 32.73)],
-                     [NSValue valueWithCGPoint:CGPointMake(1.22, 17.27)],
-                     [NSValue valueWithCGPoint: CGPointMake(10.31, 4.77)],
+                     [NSValue valueWithCGPoint:CGPointMake(28.83, 84)],
+                     [NSValue valueWithCGPoint:CGPointMake(7.8, 68)],
+                     [NSValue valueWithCGPoint:CGPointMake(-0.2, 42)],
+                     [NSValue valueWithCGPoint:CGPointMake(7.8, 16.09)],
+                     [NSValue valueWithCGPoint:CGPointMake(28.83, 0)],
+                     [NSValue valueWithCGPoint:CGPointMake(54.88, 0)],
+                     [NSValue valueWithCGPoint:CGPointMake(75.91, 16.09)],
+                     [NSValue valueWithCGPoint:CGPointMake(84, 42)],
+                     [NSValue valueWithCGPoint:CGPointMake(75.91, 68)],
+                     [NSValue valueWithCGPoint: CGPointMake(54.88, 84)],
+                     [NSValue valueWithCGPoint: CGPointMake(28.83, 84)],
                      nil];
         case Star:
             return [[NSArray alloc] initWithObjects:
-                    [NSValue valueWithCGPoint:CGPointMake(25, 0)],
-                    [NSValue valueWithCGPoint:CGPointMake(30.92, 16.86)],
-                    [NSValue valueWithCGPoint:CGPointMake(48.78, 17.27)],
-                    [NSValue valueWithCGPoint:CGPointMake(34.57, 28.11)],
-                    [NSValue valueWithCGPoint:CGPointMake(39.69, 45.23)],
-                    [NSValue valueWithCGPoint:CGPointMake(25, 35.07)],
-                    [NSValue valueWithCGPoint:CGPointMake(10.31, 45.23)],
-                    [NSValue valueWithCGPoint:CGPointMake(15.43, 28.11)],
-                    [NSValue valueWithCGPoint:CGPointMake(1.22, 17.27)],
-                    [NSValue valueWithCGPoint:CGPointMake(19.08, 16.86)],
+                    [NSValue valueWithCGPoint:CGPointMake(41.96, 65.01)],
+                    [NSValue valueWithCGPoint:CGPointMake(16.07, 84)],
+                    [NSValue valueWithCGPoint:CGPointMake(25.19, 52.13)],
+                    [NSValue valueWithCGPoint:CGPointMake(0, 32.05)],
+                    [NSValue valueWithCGPoint:CGPointMake(31.62, 31.41)],
+                    [NSValue valueWithCGPoint:CGPointMake(41.96, 0)],
+                    [NSValue valueWithCGPoint:CGPointMake(52.38, 31.41)],
+                    [NSValue valueWithCGPoint:CGPointMake(84, 32.05)],
+                    [NSValue valueWithCGPoint:CGPointMake(58.81, 52.13)],
+                    [NSValue valueWithCGPoint:CGPointMake(67.93, 84)],
+                    [NSValue valueWithCGPoint:CGPointMake(41.96, 65.01)],
                     nil];
         case FreakStar:
             return [[NSArray alloc] initWithObjects:
-                    [NSValue valueWithCGPoint:CGPointMake(21.07, 16.83)],
-                    [NSValue valueWithCGPoint:CGPointMake(5.45, 9.41)],
-                    [NSValue valueWithCGPoint:CGPointMake(16.16, 22.98)],
-                    [NSValue valueWithCGPoint:CGPointMake(0.63, 30.56)],
-                    [NSValue valueWithCGPoint:CGPointMake(17.91, 30.65)],
-                    [NSValue valueWithCGPoint:CGPointMake(14.15, 47.52)],
-                    [NSValue valueWithCGPoint:CGPointMake(25, 34.06)],
-                    [NSValue valueWithCGPoint:CGPointMake(35.85, 47.52)],
-                    [NSValue valueWithCGPoint:CGPointMake(32.09, 30.65)],
-                    [NSValue valueWithCGPoint:CGPointMake(49.37, 30.56)],
-                    [NSValue valueWithCGPoint:CGPointMake(33.84, 22.98)],
-                    [NSValue valueWithCGPoint:CGPointMake(44.55, 9.41)],
-                    [NSValue valueWithCGPoint:CGPointMake(28.93, 16.83)],
-                    [NSValue valueWithCGPoint:CGPointMake(25, 0)],
+                    [NSValue valueWithCGPoint:CGPointMake(42.04, 22.12)],
+                    [NSValue valueWithCGPoint:CGPointMake(60.66, 0)],
+                    [NSValue valueWithCGPoint:CGPointMake(55.5, 28.79)],
+                    [NSValue valueWithCGPoint:CGPointMake(84, 29.98)],
+                    [NSValue valueWithCGPoint:CGPointMake(58.79, 43.69)],
+                    [NSValue valueWithCGPoint:CGPointMake(75.72, 67.36)],
+                    [NSValue valueWithCGPoint:CGPointMake(49.53, 55.76)],
+                    [NSValue valueWithCGPoint:CGPointMake(42.04, 84)],
+                    [NSValue valueWithCGPoint:CGPointMake(34.56, 55.76)],
+                    [NSValue valueWithCGPoint:CGPointMake(8.28, 67.36)],
+                    [NSValue valueWithCGPoint:CGPointMake(25.21, 43.69)],
+                    [NSValue valueWithCGPoint:CGPointMake(0, 29.98)],
+                    [NSValue valueWithCGPoint:CGPointMake(28.5, 28.79)],
+                    [NSValue valueWithCGPoint:CGPointMake(23.34, 0)],
+                    [NSValue valueWithCGPoint:CGPointMake(42.04, 22.12)],
                     nil];
         default:
             return [[NSArray alloc] initWithObjects:
                     [NSValue valueWithCGPoint:CGPointMake(0.0f, 0.0f)],
-                    [NSValue valueWithCGPoint:CGPointMake(50.0f, 0.0f)],
-                    [NSValue valueWithCGPoint:CGPointMake(50.0f, 50.0f)],
-                    [NSValue valueWithCGPoint:CGPointMake(0.0f, 50.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(76.0f, 0.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(76.0f, 76.0f)],
+                    [NSValue valueWithCGPoint:CGPointMake(0.0f, 76.0f)],
                     nil];
     }
 }
@@ -452,7 +483,7 @@
         case Square:
             return [BGGUtilities createSquareWithColor:aColor];
         case Circle:
-            return [BGGUtilities createCircleWithColor:aColor andFrame:CGRectMake(2.0f, 0.0f, 48.0f, 48.0f)];
+            return [BGGUtilities createCircleWithColor:aColor andFrame:CGRectMake(2.0f, 2.0f, 82.0f, 82.0f)];
         case Triangle:
             return  [BGGUtilities createTriangleWithColor:aColor];
         case Pentagon:
@@ -466,7 +497,7 @@
         case FreakStar:
             return [BGGUtilities createFreakStarWithColor:aColor];
         case Oval:
-            return [BGGUtilities createCircleWithColor:aColor andFrame:CGRectMake(2.0f, 15.0f, 48.0f, 30.0f)];
+            return [BGGUtilities createCircleWithColor:aColor andFrame:CGRectMake(2.0f, 15.0f, 82.0f, 63.0f)];
         default:
             return [BGGUtilities createSquareWithColor:aColor];
     }

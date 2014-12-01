@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA13204C19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */; };
+		DA3AE22D1A2C47DA00816EB0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3AE22C1A2C47DA00816EB0 /* iAd.framework */; };
 		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
 		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
 		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		DA13204A19DD0489009D8425 /* BGGFirstTutorialScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGFirstTutorialScreenViewController.h; sourceTree = "<group>"; };
 		DA13204B19DD0489009D8425 /* BGGFirstTutorialScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGFirstTutorialScreenViewController.m; sourceTree = "<group>"; };
+		DA3AE22C1A2C47DA00816EB0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		DA676A2019DB876B0016C5A0 /* IQIrregularView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQIrregularView.h; sourceTree = "<group>"; };
 		DA676A2119DB876B0016C5A0 /* IQIrregularView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQIrregularView.m; sourceTree = "<group>"; };
 		DA676A2C19DB8BCC0016C5A0 /* BGGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGUtilities.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3AE22D1A2C47DA00816EB0 /* iAd.framework in Frameworks */,
 				DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */,
 				DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */,
 				DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */,
@@ -184,6 +187,7 @@
 		DAA37CB119DB80AF00F3707E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA3AE22C1A2C47DA00816EB0 /* iAd.framework */,
 				DAA37CB219DB80AF00F3707E /* Foundation.framework */,
 				DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */,
 				DAA37CB619DB80AF00F3707E /* UIKit.framework */,
@@ -532,6 +536,7 @@
 				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1ef57abc-f2f9-4d44-ba55-18166395d7b7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -541,11 +546,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniel Nanni (TGMLW25DS9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
 				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1ef57abc-f2f9-4d44-ba55-18166395d7b7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

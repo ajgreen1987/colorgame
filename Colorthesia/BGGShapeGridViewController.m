@@ -41,7 +41,7 @@
     [self.collectionView registerClass:[BGGShapeCollectionViewCell class] forCellWithReuseIdentifier:@"Shape"];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setItemSize:CGSizeMake(60.0f, 60.0f)];
+    [flowLayout setItemSize:CGSizeMake(86.0f, 86.0f)];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
     [self.collectionView setCollectionViewLayout:flowLayout];
@@ -51,9 +51,6 @@
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self animateInCollectionViewCells];
     });
-    
-
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,6 +118,11 @@
                                                        withColorIndex:[[self.randomColors objectAtIndex:shape] intValue]
                                                          andBaseColor:[[BGGApplicationManager sharedInstance] color]];
             
+            CGAffineTransform transform = IS_IPHONE_4 ? CGAffineTransformMakeScale(0.65f, 0.65f) :
+            CGAffineTransformMakeScale(0.75f, 0.75f);
+            
+            [newButton setTransform:transform];
+            
             [newButton setUserInteractionEnabled:NO];
             
             [columnArray addObject:newButton];
@@ -184,9 +186,19 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     NSArray *shapesForSection = [self.shapes objectAtIndex:section];
-    BGGIrregularButton *shape = [shapesForSection objectAtIndex:row];
     
-    [cell addSubview:shape];
+    BGGIrregularButton *shapeButton = [shapesForSection objectAtIndex:row];
+    IQIrregularView *shape = [shapeButton shape];
+    
+    // Get that shape's color
+    UIColor *shapeColor = [shape backgroundColor];
+    
+    // Compare to AppManager color
+    UIColor *currentGameColor = [[BGGApplicationManager sharedInstance] color];
+
+    [cell setIsCorrectCell:[currentGameColor isEqualToColor:shapeColor]];
+    
+    [cell addSubview:shapeButton];
     
     [cell setAlpha:0.0f];
     
@@ -213,7 +225,7 @@
         {
             BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:i];
             
-            if(![cell isEqual:selectedCell])
+            if(![cell isCorrectCell])
             {
                 
                 [UILabel beginAnimations:NULL
