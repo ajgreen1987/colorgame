@@ -20,4 +20,7 @@
 
 - (NSInteger) currentHighScore;
 
+- (void) setLeaderboardID:(NSString*)anID;
+- (NSString*) leaderboardID;
+
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BGGViewController : UIViewController
+@interface BGGViewController : UIViewController <GKGameCenterControllerDelegate>
 
 - (void) startGame;
 - (void) showHighScores;

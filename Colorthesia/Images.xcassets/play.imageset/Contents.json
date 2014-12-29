@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "iphone",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "play.png"
     },
     {
       "idiom" : "iphone",
-      "scale" : "3x",
-      "filename" : "play.png"
+      "scale" : "3x"
     }
   ],
   "info" : {

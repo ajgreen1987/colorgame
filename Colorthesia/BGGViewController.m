@@ -22,9 +22,11 @@ typedef void(^animationBlock)(BOOL);
 @property (nonatomic, weak) IBOutlet UILabel *iLabel;
 @property (nonatomic, weak) IBOutlet UILabel *aLabel;
 @property (nonatomic, strong) UIButton *play;
+@property (nonatomic, assign) BOOL isGameCenterEnabled;
 @property (nonatomic, strong) BGGIrregularButton *highScore;
 
 - (void) animateTitleLabel;
+- (void) authenticateLocalPlayer;
 
 @end
 
@@ -47,6 +49,7 @@ typedef void(^animationBlock)(BOOL);
     [[self view] addSubview:self.highScore];
     
     [self animateTitleLabel];
+    [self authenticateLocalPlayer];
     
 }
 
@@ -115,9 +118,54 @@ typedef void(^animationBlock)(BOOL);
                               sender:self];
 }
 
+- (void) authenticateLocalPlayer
+{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+        if (viewController != nil) {
+            [self presentViewController:viewController animated:YES completion:nil];
+        }
+        else{
+            if ([GKLocalPlayer localPlayer].authenticated) {
+                self.isGameCenterEnabled = YES;
+                
+                // Get the default leaderboard identifier.
+                [[GKLocalPlayer localPlayer] loadDefaultLeaderboardIdentifierWithCompletionHandler:^(NSString *leaderboardIdentifier, NSError *error) {
+                    
+                    if (error != nil)
+                    {
+                        NSLog(@"%@", [error localizedDescription]);
+                    }
+                    else
+                    {
+                        [[BGGApplicationManager sharedInstance] setLeaderboardID:leaderboardIdentifier];
+                    }
+                }];
+            }
+            
+            else{
+                self.isGameCenterEnabled = NO;
+            }
+        }
+    };
+}
+
 - (void) showHighScores
 {
-    // Move to high score controller
+    GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
+    
+    gcViewController.gameCenterDelegate = self;
+    
+    gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+    gcViewController.leaderboardIdentifier = [[BGGApplicationManager sharedInstance] leaderboardID];
+    
+    [self presentViewController:gcViewController animated:YES completion:nil];
+}
+
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

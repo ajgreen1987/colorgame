@@ -15,6 +15,7 @@
 @property (nonatomic, strong) BGGIrregularButton *replay;
 
 - (void) handleNextOrReplay:(id)sender;
+- (void) reportScore;
 
 @end
 
@@ -96,6 +97,7 @@
     {
         NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
         [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
+        [self reportScore];
     }
 }
 
@@ -112,6 +114,18 @@
     {
         [self performSegueWithIdentifier:SEGUE_GAMEREPLAY sender:self];
     }
+}
+
+- (void) reportScore
+{
+    GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:[[BGGApplicationManager sharedInstance] leaderboardID]];
+    score.value = 100;
+    
+    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+    }];
 }
 
 @end

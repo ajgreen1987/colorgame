@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIColor *currentColor;
 @property (nonatomic, assign) NSInteger currentScore;
 @property (nonatomic, assign) NSInteger highScore;
+@property (nonatomic, strong) NSString *leaderboardIdentifier;
 
 @end
 
@@ -61,6 +62,16 @@ static BGGApplicationManager *sharedAppManager;
 - (NSInteger) currentHighScore
 {
     return self.highScore;
+}
+
+- (void) setLeaderboardID:(NSString*)anID
+{
+    self.leaderboardIdentifier = anID;
+}
+
+- (NSString*) leaderboardID
+{
+    return self.leaderboardIdentifier;
 }
 
 @end

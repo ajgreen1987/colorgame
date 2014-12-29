@@ -13,6 +13,7 @@
 		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
 		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
 		DA8E2FB519E760FA00CA2BF9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */; };
+		DA950DE81A51AC0100451C7E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA950DE71A51AC0100451C7E /* GameKit.framework */; };
 		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
 		DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */; };
 		DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB619DB80AF00F3707E /* UIKit.framework */; };
@@ -62,6 +63,7 @@
 		DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGIrregularButton.h; sourceTree = "<group>"; };
 		DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGIrregularButton.m; sourceTree = "<group>"; };
 		DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		DA950DE71A51AC0100451C7E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DAA37CAF19DB80AF00F3707E /* Colorthesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorthesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA37CB219DB80AF00F3707E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 				DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */,
 				DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */,
 				DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */,
+				DA950DE81A51AC0100451C7E /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +190,7 @@
 		DAA37CB119DB80AF00F3707E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA950DE71A51AC0100451C7E /* GameKit.framework */,
 				DA3AE22C1A2C47DA00816EB0 /* iAd.framework */,
 				DAA37CB219DB80AF00F3707E /* Foundation.framework */,
 				DAA37CB419DB80AF00F3707E /* CoreGraphics.framework */,
@@ -337,6 +341,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Big Gorilla Games";
 				TargetAttributes = {
+					DAA37CAE19DB80AF00F3707E = {
+						DevelopmentTeam = TGMLW25DS9;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					DAA37CCF19DB80AF00F3707E = {
 						TestTargetID = DAA37CAE19DB80AF00F3707E;
 					};
@@ -531,12 +543,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
 				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ef57abc-f2f9-4d44-ba55-18166395d7b7";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -546,13 +560,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniel Nanni (TGMLW25DS9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Colorthesia/Colorthesia-Prefix.pch";
 				INFOPLIST_FILE = "Colorthesia/Colorthesia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ef57abc-f2f9-4d44-ba55-18166395d7b7";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
