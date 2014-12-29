@@ -298,56 +298,56 @@
             return aBaseColor;
         case 1:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
-                                                     byRed:[BGGUtilities properColor:-1]
-                                                     green:0
-                                                      blue:[BGGUtilities properColor:36]];
+                                                     byRed:[BGGUtilities properColor:-8]
+                                                     green:[BGGUtilities properColor:2]
+                                                      blue:[BGGUtilities properColor:40]];
         case 2:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
-                                                     byRed:[BGGUtilities properColor:-39]
+                                                     byRed:[BGGUtilities properColor:-56]
                                                      green:0
                                                       blue:0];
         case 3:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
                                                      byRed:0
-                                                     green:[BGGUtilities properColor:4]
-                                                      blue:[BGGUtilities properColor:10]];
+                                                     green:[BGGUtilities properColor:15]
+                                                      blue:[BGGUtilities properColor:20]];
         case 4:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
-                                                     byRed:[BGGUtilities properColor:-1]
-                                                     green:[BGGUtilities properColor:-3]
+                                                     byRed:[BGGUtilities properColor:-9]
+                                                     green:[BGGUtilities properColor:-12]
                                                       blue:0];
         case 5:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
-                                                     byRed:[BGGUtilities properColor:-2]
-                                                     green:[BGGUtilities properColor:-38]
-                                                      blue:[BGGUtilities properColor:1]];
+                                                     byRed:[BGGUtilities properColor:-12]
+                                                     green:[BGGUtilities properColor:-48]
+                                                      blue:[BGGUtilities properColor:8]];
         case 6:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
                                                      byRed:0
-                                                     green:[BGGUtilities properColor:4]
-                                                      blue:[BGGUtilities properColor:5]];
+                                                     green:[BGGUtilities properColor:16]
+                                                      blue:[BGGUtilities properColor:10]];
         case 7:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
-                                                     byRed:[BGGUtilities properColor:1]
-                                                     green:[BGGUtilities properColor:48]
-                                                      blue:[BGGUtilities properColor:5]];
+                                                     byRed:[BGGUtilities properColor:8]
+                                                     green:[BGGUtilities properColor:61]
+                                                      blue:[BGGUtilities properColor:16]];
         case 8:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
                                                      byRed:0
-                                                     green:[BGGUtilities properColor:16]
-                                                      blue:[BGGUtilities properColor:26]];
+                                                     green:[BGGUtilities properColor:29]
+                                                      blue:[BGGUtilities properColor:36]];
         case 9:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
                                                      byRed:0
                                                      green:0
                                                       blue:0
-                                                  andAlpha:0.93f];
+                                                  andAlpha:0.80f];
         default:
             return [BGGUtilities colorByAdjustingBaseColor:aBaseColor
                                                      byRed:0
                                                      green:0
                                                       blue:0
-                                                  andAlpha:0.93f];
+                                                  andAlpha:0.80f];
     }
 }
 

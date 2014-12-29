@@ -119,7 +119,7 @@
 - (void) reportScore
 {
     GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:[[BGGApplicationManager sharedInstance] leaderboardID]];
-    score.value = 100;
+    score.value = [[BGGApplicationManager sharedInstance] currentHighScore];
     
     [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
         if (error != nil) {
