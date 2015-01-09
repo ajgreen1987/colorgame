@@ -15,6 +15,7 @@
     #import <Foundation/Foundation.h>
     #import <iAd/iAd.h>
     #import <GameKit/GameKit.h>
+    #import <AVFoundation/AVFoundation.h>
     #import "BGGApplicationManager.h"
     #import "BGGUtilities.h"
 #endif

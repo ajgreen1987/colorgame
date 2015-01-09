@@ -12,6 +12,12 @@
 
 + (instancetype) sharedInstance;
 
+- (void) playBackgroundMusic;
+- (void) restartBackgroundMusic;
+- (void) pauseBackgroundMusic;
+- (void) playPopSoundEffect;
+- (void) playAnswerSoundEffect:(BOOL)isCorrectAnswer;
+
 - (void) setColor:(UIColor*)aColor;
 - (UIColor*) color;
 

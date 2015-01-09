@@ -75,6 +75,8 @@
 {
     [self.containedGrid.collectionView setUserInteractionEnabled:NO];
 
+    [[BGGApplicationManager sharedInstance] playAnswerSoundEffect:isCorrect];
+    
     NSString *resultText = isCorrect ? @"Correct!" : @"Wrong!";
     NSString *imageName = isCorrect ? @"Next" : @"Replay";
     
@@ -118,6 +120,8 @@
 
 - (void) reportScore
 {
+    if([[BGGApplicationManager sharedInstance] leaderboardID] != nil)
+    {
     GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:[[BGGApplicationManager sharedInstance] leaderboardID]];
     score.value = [[BGGApplicationManager sharedInstance] currentHighScore];
     
@@ -126,6 +130,7 @@
             NSLog(@"%@", [error localizedDescription]);
         }
     }];
+    }
 }
 
 @end

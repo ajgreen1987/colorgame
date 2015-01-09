@@ -7,6 +7,7 @@
 //
 
 #import "BGGApplicationManager.h"
+#import "BGGAudioPlayerPool.h"
 
 @interface BGGApplicationManager ()
 
@@ -14,6 +15,10 @@
 @property (nonatomic, assign) NSInteger currentScore;
 @property (nonatomic, assign) NSInteger highScore;
 @property (nonatomic, strong) NSString *leaderboardIdentifier;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+
+- (void) playSoundEffectWithFileName:(NSString*)aFileName;
+- (NSURL*) audioURLWithFileName:(NSString*)aFileName;
 
 @end
 
@@ -72,6 +77,62 @@ static BGGApplicationManager *sharedAppManager;
 - (NSString*) leaderboardID
 {
     return self.leaderboardIdentifier;
+}
+
+#pragma mark - Background Music
+- (void) playBackgroundMusic
+{
+    if (self.audioPlayer == nil)
+    {
+        // Create audio player object and initialize with URL to sound
+        self.audioPlayer = [BGGAudioPlayerPool playerWithURL:[self audioURLWithFileName:@"Theme.mp3"]];
+        [self.audioPlayer setNumberOfLoops:-1];
+    }
+    
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer play];
+}
+
+- (void) restartBackgroundMusic
+{
+    if ((self.audioPlayer != nil) && [self.audioPlayer isPlaying])
+    {
+        [self.audioPlayer setCurrentTime:0];
+    }
+}
+
+- (void) pauseBackgroundMusic
+{
+    if (self.audioPlayer!=nil)
+    {
+        [self.audioPlayer pause];
+    }
+}
+
+- (void) playSoundEffectWithFileName:(NSString*)aFileName
+{
+    AVAudioPlayer *player = [BGGAudioPlayerPool playerWithURL:[self audioURLWithFileName:aFileName]];
+    
+
+    [player play];
+}
+
+- (void) playPopSoundEffect
+{
+    [self playSoundEffectWithFileName:@"Pop.wav"];
+}
+
+- (void) playAnswerSoundEffect:(BOOL)isCorrectAnswer
+{
+    NSString *answerFile = isCorrectAnswer ? @"Correct.wav" : @"Wrong.wav";
+    [self playSoundEffectWithFileName:answerFile];
+}
+
+- (NSURL*) audioURLWithFileName:(NSString*)aFileName
+{
+    // Construct URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], aFileName];
+    return [NSURL fileURLWithPath:path];
 }
 
 @end

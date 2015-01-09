@@ -49,8 +49,18 @@ typedef void(^animationBlock)(BOOL);
     [[self view] addSubview:self.highScore];
     
     [self animateTitleLabel];
-    [self authenticateLocalPlayer];
     
+    
+    [[BGGApplicationManager sharedInstance] restartBackgroundMusic];
+    [[BGGApplicationManager sharedInstance] playBackgroundMusic];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    // Little breathing room for aniamtions to complete
+    [self performSelector:@selector(authenticateLocalPlayer)
+               withObject:nil
+               afterDelay:3.0f];
 }
 
 - (void)didReceiveMemoryWarning

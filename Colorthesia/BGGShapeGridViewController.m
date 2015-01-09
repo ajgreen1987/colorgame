@@ -81,13 +81,18 @@
         
         NSInteger random = [[self.randomShapes objectAtIndex:i] integerValue];
         BGGShapeCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:random];
+        
+
+        
         [UIView animateWithDuration:1.0f
                               delay:delayInSeconds
                             options:UIViewAnimationOptionAllowUserInteraction
                          animations:^{
                              // Fade in with delay
                              [cell setAlpha:1.0f];
-                         } completion:^(BOOL finished) {
+                         } completion:^(BOOL finished)
+                            {
+                            [[BGGApplicationManager sharedInstance] playPopSoundEffect];
                              if (i==(self.collectionView.visibleCells.count-1))
                              {
                                  [self.collectionView setUserInteractionEnabled:YES];

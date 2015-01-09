@@ -12,6 +12,12 @@
 		DA676A2219DB876B0016C5A0 /* IQIrregularView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2119DB876B0016C5A0 /* IQIrregularView.m */; };
 		DA676A2E19DB8BCC0016C5A0 /* BGGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */; };
 		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
+		DA81A2421A604F08008B4564 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA81A2411A604F08008B4564 /* AVFoundation.framework */; };
+		DA81A2471A604FC3008B4564 /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2431A604FC3008B4564 /* Correct.wav */; };
+		DA81A2481A604FC3008B4564 /* Pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2441A604FC3008B4564 /* Pop.wav */; };
+		DA81A2491A604FC3008B4564 /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2451A604FC3008B4564 /* Theme.mp3 */; };
+		DA81A24A1A604FC3008B4564 /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2461A604FC3008B4564 /* Wrong.wav */; };
+		DA81A24D1A605362008B4564 /* BGGAudioPlayerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA81A24C1A605362008B4564 /* BGGAudioPlayerPool.m */; };
 		DA8E2FB519E760FA00CA2BF9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */; };
 		DA950DE81A51AC0100451C7E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA950DE71A51AC0100451C7E /* GameKit.framework */; };
 		DAA37CB319DB80AF00F3707E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA37CB219DB80AF00F3707E /* Foundation.framework */; };
@@ -62,6 +68,13 @@
 		DA676A2D19DB8BCC0016C5A0 /* BGGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGUtilities.m; sourceTree = "<group>"; };
 		DA676A2F19DBA78F0016C5A0 /* BGGIrregularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGIrregularButton.h; sourceTree = "<group>"; };
 		DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGIrregularButton.m; sourceTree = "<group>"; };
+		DA81A2411A604F08008B4564 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA81A2431A604FC3008B4564 /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Correct.wav; sourceTree = "<group>"; };
+		DA81A2441A604FC3008B4564 /* Pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Pop.wav; sourceTree = "<group>"; };
+		DA81A2451A604FC3008B4564 /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
+		DA81A2461A604FC3008B4564 /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
+		DA81A24B1A605362008B4564 /* BGGAudioPlayerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGAudioPlayerPool.h; sourceTree = "<group>"; };
+		DA81A24C1A605362008B4564 /* BGGAudioPlayerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGAudioPlayerPool.m; sourceTree = "<group>"; };
 		DA8E2FB419E760FA00CA2BF9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DA950DE71A51AC0100451C7E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DAA37CAF19DB80AF00F3707E /* Colorthesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorthesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA81A2421A604F08008B4564 /* AVFoundation.framework in Frameworks */,
 				DA3AE22D1A2C47DA00816EB0 /* iAd.framework in Frameworks */,
 				DAA37CB519DB80AF00F3707E /* CoreGraphics.framework in Frameworks */,
 				DAA37CB719DB80AF00F3707E /* UIKit.framework in Frameworks */,
@@ -164,6 +178,8 @@
 				DAD7A70919E6101E00BFE1A9 /* UIColor+Matching.m */,
 				DAE5FF9F19EA2FEF008212D0 /* BGGFadeSegue.h */,
 				DAE5FFA019EA2FEF008212D0 /* BGGFadeSegue.m */,
+				DA81A24B1A605362008B4564 /* BGGAudioPlayerPool.h */,
+				DA81A24C1A605362008B4564 /* BGGAudioPlayerPool.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -190,6 +206,7 @@
 		DAA37CB119DB80AF00F3707E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA81A2411A604F08008B4564 /* AVFoundation.framework */,
 				DA950DE71A51AC0100451C7E /* GameKit.framework */,
 				DA3AE22C1A2C47DA00816EB0 /* iAd.framework */,
 				DAA37CB219DB80AF00F3707E /* Foundation.framework */,
@@ -219,6 +236,10 @@
 		DAA37CB919DB80AF00F3707E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA81A2431A604FC3008B4564 /* Correct.wav */,
+				DA81A2441A604FC3008B4564 /* Pop.wav */,
+				DA81A2451A604FC3008B4564 /* Theme.mp3 */,
+				DA81A2461A604FC3008B4564 /* Wrong.wav */,
 				DACFCDEB19E375950047115B /* Quicksand-Bold.otf */,
 				DAA37CE719DB81BC00F3707E /* Quicksand-Light.otf */,
 				DAA37CBA19DB80AF00F3707E /* Colorthesia-Info.plist */,
@@ -379,11 +400,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACFCDEC19E375950047115B /* Quicksand-Bold.otf in Resources */,
+				DA81A2471A604FC3008B4564 /* Correct.wav in Resources */,
 				DAA37CCB19DB80AF00F3707E /* Images.xcassets in Resources */,
+				DA81A2481A604FC3008B4564 /* Pop.wav in Resources */,
 				DAA37CBD19DB80AF00F3707E /* InfoPlist.strings in Resources */,
 				DAC97CF219E21901000E7330 /* BGGShapeCollectionViewCell.xib in Resources */,
+				DA81A2491A604FC3008B4564 /* Theme.mp3 in Resources */,
 				DAA37CE819DB81BC00F3707E /* Quicksand-Light.otf in Resources */,
 				DAA37CC619DB80AF00F3707E /* Main.storyboard in Resources */,
+				DA81A24A1A604FC3008B4564 /* Wrong.wav in Resources */,
 				DA8E2FB519E760FA00CA2BF9 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +442,7 @@
 				DAD7A70319E60B7000BFE1A9 /* BGGGameBoardViewController.m in Sources */,
 				DAC97CE219E1A09D000E7330 /* BGGGamePlayViewController.m in Sources */,
 				DAC97CDE19E19D71000E7330 /* BGGSecondTutorialScreenViewController.m in Sources */,
+				DA81A24D1A605362008B4564 /* BGGAudioPlayerPool.m in Sources */,
 				DAA37CC319DB80AF00F3707E /* BGGAppDelegate.m in Sources */,
 				DACFCDEA19E375270047115B /* BGGThirdTutorialScreenViewController.m in Sources */,
 			);

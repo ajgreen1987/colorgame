@@ -25,6 +25,8 @@
 {
     [super viewDidLoad];
     
+    [[BGGApplicationManager sharedInstance] pauseBackgroundMusic];
+    
     self.seconds = 1;
     self.countdown = 3;
     
@@ -78,6 +80,7 @@
     else
     {
         [aTimer invalidate];
+        [[BGGApplicationManager sharedInstance] playBackgroundMusic];
         [self moveToNextController];
     }
 }
