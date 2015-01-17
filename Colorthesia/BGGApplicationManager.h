@@ -24,6 +24,7 @@
 - (void) setScore:(NSInteger)aScore;
 - (NSInteger) score;
 
+- (void) setHighScore:(NSInteger)aScore;
 - (NSInteger) currentHighScore;
 
 - (void) setLeaderboardID:(NSString*)anID;

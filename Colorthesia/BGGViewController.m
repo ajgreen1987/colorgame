@@ -61,6 +61,9 @@ typedef void(^animationBlock)(BOOL);
     [self performSelector:@selector(authenticateLocalPlayer)
                withObject:nil
                afterDelay:3.0f];
+    
+    [[BGGApplicationManager sharedInstance] setHighScore:0];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -163,6 +166,7 @@ typedef void(^animationBlock)(BOOL);
 
 - (void) showHighScores
 {
+
     GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
     
     gcViewController.gameCenterDelegate = self;

@@ -64,6 +64,11 @@ static BGGApplicationManager *sharedAppManager;
     return self.currentScore;
 }
 
+- (void) setHighScore:(NSInteger)aScore
+{
+    self.highScore = aScore;
+}
+
 - (NSInteger) currentHighScore
 {
     return self.highScore;
@@ -119,7 +124,7 @@ static BGGApplicationManager *sharedAppManager;
 
 - (void) playPopSoundEffect
 {
-    [self playSoundEffectWithFileName:@"Pop.wav"];
+    //[self playSoundEffectWithFileName:@"Pop.wav"];
 }
 
 - (void) playAnswerSoundEffect:(BOOL)isCorrectAnswer
