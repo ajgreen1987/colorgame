@@ -62,7 +62,7 @@ typedef void(^animationBlock)(BOOL);
                withObject:nil
                afterDelay:3.0f];
     
-    [[BGGApplicationManager sharedInstance] setHighScore:0];
+    [[BGGApplicationManager sharedInstance] setCurrentHighScore:0];
     
 }
 

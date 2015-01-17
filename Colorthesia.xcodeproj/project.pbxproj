@@ -14,7 +14,6 @@
 		DA676A3119DBA78F0016C5A0 /* BGGIrregularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */; };
 		DA81A2421A604F08008B4564 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA81A2411A604F08008B4564 /* AVFoundation.framework */; };
 		DA81A2471A604FC3008B4564 /* Correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2431A604FC3008B4564 /* Correct.wav */; };
-		DA81A2481A604FC3008B4564 /* Pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2441A604FC3008B4564 /* Pop.wav */; };
 		DA81A2491A604FC3008B4564 /* Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2451A604FC3008B4564 /* Theme.mp3 */; };
 		DA81A24A1A604FC3008B4564 /* Wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA81A2461A604FC3008B4564 /* Wrong.wav */; };
 		DA81A24D1A605362008B4564 /* BGGAudioPlayerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA81A24C1A605362008B4564 /* BGGAudioPlayerPool.m */; };
@@ -70,7 +69,6 @@
 		DA676A3019DBA78F0016C5A0 /* BGGIrregularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGGIrregularButton.m; sourceTree = "<group>"; };
 		DA81A2411A604F08008B4564 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DA81A2431A604FC3008B4564 /* Correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Correct.wav; sourceTree = "<group>"; };
-		DA81A2441A604FC3008B4564 /* Pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Pop.wav; sourceTree = "<group>"; };
 		DA81A2451A604FC3008B4564 /* Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Theme.mp3; sourceTree = "<group>"; };
 		DA81A2461A604FC3008B4564 /* Wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wrong.wav; sourceTree = "<group>"; };
 		DA81A24B1A605362008B4564 /* BGGAudioPlayerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGGAudioPlayerPool.h; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				DA81A2431A604FC3008B4564 /* Correct.wav */,
-				DA81A2441A604FC3008B4564 /* Pop.wav */,
 				DA81A2451A604FC3008B4564 /* Theme.mp3 */,
 				DA81A2461A604FC3008B4564 /* Wrong.wav */,
 				DACFCDEB19E375950047115B /* Quicksand-Bold.otf */,
@@ -402,7 +399,6 @@
 				DACFCDEC19E375950047115B /* Quicksand-Bold.otf in Resources */,
 				DA81A2471A604FC3008B4564 /* Correct.wav in Resources */,
 				DAA37CCB19DB80AF00F3707E /* Images.xcassets in Resources */,
-				DA81A2481A604FC3008B4564 /* Pop.wav in Resources */,
 				DAA37CBD19DB80AF00F3707E /* InfoPlist.strings in Resources */,
 				DAC97CF219E21901000E7330 /* BGGShapeCollectionViewCell.xib in Resources */,
 				DA81A2491A604FC3008B4564 /* Theme.mp3 in Resources */,

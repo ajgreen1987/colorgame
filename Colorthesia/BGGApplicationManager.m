@@ -64,7 +64,7 @@ static BGGApplicationManager *sharedAppManager;
     return self.currentScore;
 }
 
-- (void) setHighScore:(NSInteger)aScore
+- (void) setCurrentHighScore:(NSInteger)aScore
 {
     self.highScore = aScore;
 }
