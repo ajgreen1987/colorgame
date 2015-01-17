@@ -219,7 +219,6 @@
     NSInteger row = indexPath.row;
     
     NSArray *shapesForSection = [self.shapes objectAtIndex:section];
-    __block BGGShapeCollectionViewCell *selectedCell = (BGGShapeCollectionViewCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
     BGGIrregularButton *shapeButton = [shapesForSection objectAtIndex:row];
     
     double delayInSeconds = 0.0f;
@@ -250,7 +249,7 @@
     // Compare to AppManager color
     UIColor *currentGameColor = [[BGGApplicationManager sharedInstance] color];
     
-    BOOL colorsMatch = [currentGameColor isEqualToColor:shapeColor];
+    BOOL colorsMatch = ALWAYS_WIN ? YES : [currentGameColor isEqualToColor:shapeColor];
     
     if(self.gridDelegate != nil)
     {

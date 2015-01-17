@@ -57,6 +57,8 @@ typedef void(^animationBlock)(BOOL);
 
 - (void) viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     // Little breathing room for aniamtions to complete
     [self performSelector:@selector(authenticateLocalPlayer)
                withObject:nil

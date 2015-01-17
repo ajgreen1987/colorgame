@@ -28,13 +28,13 @@
     // Do any additional setup after loading the view.
     self.containedGrid = (BGGShapeGridViewController*)[self.childViewControllers objectAtIndex:0];
     [self.containedGrid setGridDelegate:self];
-    
-    [[self score] setText:[NSString stringWithFormat:@"%li",(long)[[BGGApplicationManager sharedInstance] score]]];
 
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     if (IS_IPHONE_4)
     {
         // Need to adjust the grid up slightly
@@ -77,6 +77,17 @@
 
     [[BGGApplicationManager sharedInstance] playAnswerSoundEffect:isCorrect];
     
+    if (isCorrect)
+    {
+        NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
+        [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
+        [self.score setText:[NSString stringWithFormat:@"%li",(long)[[BGGApplicationManager sharedInstance] score]]];
+    }
+    else
+    {
+        [self reportScore];
+    }
+    
     NSString *resultText = isCorrect ? @"Correct!" : @"Wrong!";
     NSString *imageName = isCorrect ? @"Next" : @"Replay";
     
@@ -95,12 +106,7 @@
     [self.replay setAlpha:1.0f];
     [[self view] addSubview:self.replay];
     
-    if (isCorrect)
-    {
-        NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
-        [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
-        [self reportScore];
-    }
+
 }
 
 - (void) handleNextOrReplay:(id)sender

@@ -59,7 +59,7 @@
                                    userInfo:nil
                                     repeats:YES];
     
-    [[self score] setText:[NSString stringWithFormat:@"%li",[[BGGApplicationManager sharedInstance] score]]];
+    [[self score] setText:[NSString stringWithFormat:@"%li",(long)[[BGGApplicationManager sharedInstance] score]]];
 }
 
 - (void)didReceiveMemoryWarning

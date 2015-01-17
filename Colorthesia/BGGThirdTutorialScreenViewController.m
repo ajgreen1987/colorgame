@@ -12,7 +12,6 @@
 @interface BGGThirdTutorialScreenViewController ()
 
 @property (nonatomic, strong) BGGIrregularButton *start;
-- (void) fadeInStartButton;
 
 @end
 

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define ALWAYS_WIN 0
+
 @interface BGGApplicationManager : NSObject
 
 + (instancetype) sharedInstance;
