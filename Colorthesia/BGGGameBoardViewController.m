@@ -14,6 +14,7 @@
 @property (nonatomic, weak) BGGShapeGridViewController *containedGrid;
 @property (nonatomic, strong) BGGIrregularButton *replay;
 
+- (void) setScoreText:(NSInteger)aScore;
 - (void) handleNextOrReplay:(id)sender;
 - (void) reportScore;
 
@@ -52,6 +53,8 @@
         // Adjust the font
         //[self.highScore setFont:[BGGUtilities systemFontOfSize:24.0f]];
     }
+    
+    [self setScoreText:[[BGGApplicationManager sharedInstance] score]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +72,12 @@
 }
 */
 
+#pragma mark - Score Text
+- (void) setScoreText:(NSInteger)aScore
+{
+    [self.score setText:[NSString stringWithFormat:@"%li",(long)[[BGGApplicationManager sharedInstance] score]]];
+}
+
 #pragma mark -
 #pragma mark - Grid Delegate
 - (void) touchedShape:(BOOL)isCorrect
@@ -81,7 +90,7 @@
     {
         NSInteger currentScore = [[BGGApplicationManager sharedInstance] score];
         [[BGGApplicationManager sharedInstance] setScore:currentScore+1];
-        [self.score setText:[NSString stringWithFormat:@"%li",(long)[[BGGApplicationManager sharedInstance] score]]];
+        [self setScoreText:[[BGGApplicationManager sharedInstance] score]];
     }
     else
     {

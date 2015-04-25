@@ -86,6 +86,23 @@
     [prefs synchronize];
 }
 
+#pragma mark - High Score
++ (void) saveHighScore:(NSInteger)aHighScore
+{
+    NSInteger currentHighScore = [BGGUtilities retrieveHighScore];
+    
+    if (aHighScore > currentHighScore)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:aHighScore]
+                                                  forKey:HIGH_SCORE_KEY];
+    }
+}
+
++ (NSInteger) retrieveHighScore
+{
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:HIGH_SCORE_KEY] integerValue];
+}
+
 #pragma mark -
 #pragma mark - Font Helpers
 

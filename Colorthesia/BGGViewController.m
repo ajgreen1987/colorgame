@@ -62,10 +62,7 @@ typedef void(^animationBlock)(BOOL);
     // Little breathing room for aniamtions to complete
     [self performSelector:@selector(authenticateLocalPlayer)
                withObject:nil
-               afterDelay:3.0f];
-    
-    [[BGGApplicationManager sharedInstance] setCurrentHighScore:0];
-    
+               afterDelay:3.0f];    
 }
 
 - (void)didReceiveMemoryWarning

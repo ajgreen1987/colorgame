@@ -18,6 +18,7 @@
 #define VERSION_KEY             @"CFBundleVersion"
 #define PREF_TUTORIAL_KEY       @"tutorial_preference"
 #define PREF_VERSION_KEY        @"version_preference"
+#define HIGH_SCORE_KEY          @"high_score"
 
 #define SEGUE_TUTORIAL_START    @"TutorialStart"
 #define SEGUE_TUTORIAL_SECOND   @"TutorialSecond"
@@ -48,6 +49,8 @@ typedef enum
 + (BOOL) shouldShowTutorial;
 + (void) setVersionNumber;
 + (void) saveTutorialPreferenceSelection:(BOOL)shouldShowNextTime;
++ (void) saveHighScore:(NSInteger)aHighScore;
++ (NSInteger) retrieveHighScore;
 
 + (UIFont*) systemFontOfSize:(CGFloat)aSize;
 
